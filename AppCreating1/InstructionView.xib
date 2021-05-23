@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Yuanti.ttc">
+            <string>STYuanti-TC-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstructionView" customModule="AppCreating1" customModuleProvider="target">
+            <connections>
+                <outlet property="indicator" destination="5wq-hp-KFA" id="eRw-Dv-UmK"/>
+                <outlet property="instructionText" destination="ISn-BK-baV" id="BPa-0I-yRX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="573" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKk-y6-ult" userLabel="Balloon View" customClass="DesignableView" customModule="AppCreating1" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="573" height="200"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kappa" translatesAutoresizingMaskIntoConstraints="NO" id="d4C-Yf-Kkd">
+                            <rect key="frame" x="16" y="60" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="KN6-5W-tV2"/>
+                                <constraint firstAttribute="width" constant="80" id="uzr-jp-Mcg"/>
+                            </constraints>
+                        </imageView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkT-Y1-d00">
+                            <rect key="frame" x="116" y="20" width="437" height="160"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iu2-q0-1xh" userLabel="Scroll Content">
+                                    <rect key="frame" x="0.0" y="0.0" width="437" height="19"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISn-BK-baV" userLabel="Instruction Text">
+                                            <rect key="frame" x="0.0" y="0.0" width="437" height="19"/>
+                                            <fontDescription key="fontDescription" name="STYuanti-TC-Regular" family="Yuanti TC" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="ISn-BK-baV" firstAttribute="top" secondItem="iu2-q0-1xh" secondAttribute="top" id="Fn6-Kf-Cjk"/>
+                                        <constraint firstItem="ISn-BK-baV" firstAttribute="trailing" secondItem="iu2-q0-1xh" secondAttribute="trailing" id="MSH-NH-ux2"/>
+                                        <constraint firstItem="ISn-BK-baV" firstAttribute="leading" secondItem="iu2-q0-1xh" secondAttribute="leading" id="NUV-rs-tfV"/>
+                                        <constraint firstItem="ISn-BK-baV" firstAttribute="bottom" secondItem="iu2-q0-1xh" secondAttribute="bottom" id="tf8-Uf-TFI"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="iu2-q0-1xh" firstAttribute="bottom" secondItem="553-eK-XNj" secondAttribute="bottom" id="7Ij-hu-Gjz"/>
+                                <constraint firstItem="iu2-q0-1xh" firstAttribute="leading" secondItem="553-eK-XNj" secondAttribute="leading" id="H6a-cP-ov2"/>
+                                <constraint firstItem="iu2-q0-1xh" firstAttribute="trailing" secondItem="553-eK-XNj" secondAttribute="trailing" id="MDg-MG-tKy"/>
+                                <constraint firstItem="iu2-q0-1xh" firstAttribute="top" secondItem="553-eK-XNj" secondAttribute="top" id="iWT-VE-Rrh"/>
+                                <constraint firstItem="iu2-q0-1xh" firstAttribute="width" secondItem="LRL-cT-BVh" secondAttribute="width" id="t3e-dr-2FY"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="553-eK-XNj"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="LRL-cT-BVh"/>
+                        </scrollView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5wq-hp-KFA" userLabel="Indicator">
+                            <rect key="frame" x="541" y="170" width="16" height="12"/>
+                            <color key="tintColor" name="Purple"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="2rI-72-7hp"/>
+                                <constraint firstAttribute="height" constant="16" id="3lf-h4-QiU"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="5wq-hp-KFA" firstAttribute="trailing" secondItem="FKk-y6-ult" secondAttribute="trailing" constant="-16" id="Dcc-1m-QrM"/>
+                        <constraint firstItem="d4C-Yf-Kkd" firstAttribute="leading" secondItem="FKk-y6-ult" secondAttribute="leading" constant="16" id="EcK-kd-Lms"/>
+                        <constraint firstItem="zkT-Y1-d00" firstAttribute="trailing" secondItem="FKk-y6-ult" secondAttribute="trailing" constant="-20" id="ElP-Ht-JZ0"/>
+                        <constraint firstItem="5wq-hp-KFA" firstAttribute="bottom" secondItem="FKk-y6-ult" secondAttribute="bottom" constant="-16" id="GP1-Kk-AiD"/>
+                        <constraint firstItem="zkT-Y1-d00" firstAttribute="leading" secondItem="d4C-Yf-Kkd" secondAttribute="trailing" constant="20" id="MZ6-wQ-OWC"/>
+                        <constraint firstItem="zkT-Y1-d00" firstAttribute="top" secondItem="FKk-y6-ult" secondAttribute="top" constant="20" id="a6j-mc-Ehq"/>
+                        <constraint firstItem="zkT-Y1-d00" firstAttribute="bottom" secondItem="FKk-y6-ult" secondAttribute="bottom" constant="-20" id="erF-jX-wfr"/>
+                        <constraint firstItem="d4C-Yf-Kkd" firstAttribute="centerY" secondItem="FKk-y6-ult" secondAttribute="centerY" id="yRO-BC-024"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="Purple"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="FKk-y6-ult" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2YB-QY-pn1"/>
+                <constraint firstItem="FKk-y6-ult" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="TDu-gy-gU7"/>
+                <constraint firstItem="FKk-y6-ult" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aAP-aw-NnC"/>
+                <constraint firstItem="FKk-y6-ult" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="aYB-kK-GUg"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-65.94202898550725" y="-161.71875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Kappa" width="496" height="674"/>
+        <image name="arrowtriangle.down.fill" catalog="system" width="128" height="124"/>
+        <namedColor name="Purple">
+            <color red="0.45899999141693115" green="0.0080000003799796104" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

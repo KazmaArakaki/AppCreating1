@@ -14,6 +14,18 @@
 		312A96202646A604008C2278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312A961F2646A604008C2278 /* Assets.xcassets */; };
 		312A96232646A604008C2278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312A96212646A604008C2278 /* LaunchScreen.storyboard */; };
 		312A96352646A6D1008C2278 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 312A96372646A6D1008C2278 /* InfoPlist.strings */; };
+		312E8FF42659107C00EE0E2D /* PlayersNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312E8FF32659107C00EE0E2D /* PlayersNavigationController.swift */; };
+		312E8FF82659281F00EE0E2D /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312E8FF72659281F00EE0E2D /* DesignableView.swift */; };
+		312E8FFD265928FB00EE0E2D /* KeyboardSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312E8FFC265928FB00EE0E2D /* KeyboardSpacerView.swift */; };
+		31322B0226511CC5008D58C1 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31322B0126511CC5008D58C1 /* BaseButton.swift */; };
+		31322B0726512834008D58C1 /* AssetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31322B0626512834008D58C1 /* AssetImageView.swift */; };
+		3180C4BE265A637D002ED550 /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180C4BD265A637D002ED550 /* InstructionView.swift */; };
+		3180C4C1265A63B1002ED550 /* InstructionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3180C4C0265A63B1002ED550 /* InstructionView.xib */; };
+		3180C4C4265A8E32002ED550 /* PlayersAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */; };
+		3180C4C9265A952A002ED550 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3180C4CB265A952A002ED550 /* Localizable.strings */; };
+		31C3C11D264FABA900CCD7A9 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C3C11C264FABA900CCD7A9 /* PrimaryButton.swift */; };
+		31C3C121264FBF6500CCD7A9 /* Yuanti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 31C3C120264FBF6500CCD7A9 /* Yuanti.ttc */; };
+		31E47E92264FD5910028B545 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E47E91264FD5910028B545 /* SecondaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +39,19 @@
 		312A96242646A604008C2278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		312A96322646A6C5008C2278 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		312A96332646A6C5008C2278 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		312A96362646A6D1008C2278 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		312A96392646A6D4008C2278 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		312E8FF32659107C00EE0E2D /* PlayersNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersNavigationController.swift; sourceTree = "<group>"; };
+		312E8FF72659281F00EE0E2D /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		312E8FFC265928FB00EE0E2D /* KeyboardSpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSpacerView.swift; sourceTree = "<group>"; };
+		31322B0126511CC5008D58C1 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		31322B0626512834008D58C1 /* AssetImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImageView.swift; sourceTree = "<group>"; };
+		3180C4BD265A637D002ED550 /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		3180C4C0265A63B1002ED550 /* InstructionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionView.xib; sourceTree = "<group>"; };
+		3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersAddViewController.swift; sourceTree = "<group>"; };
+		3180C4CA265A952A002ED550 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		31C3C11C264FABA900CCD7A9 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		31C3C120264FBF6500CCD7A9 /* Yuanti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuanti.ttc; sourceTree = "<group>"; };
+		31E47E91264FD5910028B545 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +84,18 @@
 		312A96152646A603008C2278 /* AppCreating1 */ = {
 			isa = PBXGroup;
 			children = (
-				312A962C2646A637008C2278 /* Controller */,
 				312A96162646A603008C2278 /* AppDelegate.swift */,
 				312A96182646A603008C2278 /* SceneDelegate.swift */,
-				312A961C2646A603008C2278 /* Main.storyboard */,
-				312A961F2646A604008C2278 /* Assets.xcassets */,
-				312A96212646A604008C2278 /* LaunchScreen.storyboard */,
 				312A96242646A604008C2278 /* Info.plist */,
 				312A96372646A6D1008C2278 /* InfoPlist.strings */,
+				3180C4CB265A952A002ED550 /* Localizable.strings */,
+				312A962C2646A637008C2278 /* Controller */,
+				31C3C11A264FAB4700CCD7A9 /* CustomView */,
+				31322B042651279C008D58C1 /* Extension */,
+				312A961C2646A603008C2278 /* Main.storyboard */,
+				312A96212646A604008C2278 /* LaunchScreen.storyboard */,
+				312A961F2646A604008C2278 /* Assets.xcassets */,
+				31C3C120264FBF6500CCD7A9 /* Yuanti.ttc */,
 			);
 			path = AppCreating1;
 			sourceTree = "<group>";
@@ -77,8 +104,88 @@
 			isa = PBXGroup;
 			children = (
 				312A961A2646A603008C2278 /* MainMenuViewController.swift */,
+				312E8FF32659107C00EE0E2D /* PlayersNavigationController.swift */,
+				3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		312E8FF62659280A00EE0E2D /* DesignableView */ = {
+			isa = PBXGroup;
+			children = (
+				312E8FF72659281F00EE0E2D /* DesignableView.swift */,
+			);
+			name = DesignableView;
+			sourceTree = "<group>";
+		};
+		312E8FFB265928E400EE0E2D /* KeyboardSpacerView */ = {
+			isa = PBXGroup;
+			children = (
+				312E8FFC265928FB00EE0E2D /* KeyboardSpacerView.swift */,
+			);
+			name = KeyboardSpacerView;
+			sourceTree = "<group>";
+		};
+		31322B0026511CAD008D58C1 /* BaseButton */ = {
+			isa = PBXGroup;
+			children = (
+				31322B0126511CC5008D58C1 /* BaseButton.swift */,
+			);
+			name = BaseButton;
+			sourceTree = "<group>";
+		};
+		31322B042651279C008D58C1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		31322B0526512820008D58C1 /* AssetImageView */ = {
+			isa = PBXGroup;
+			children = (
+				31322B0626512834008D58C1 /* AssetImageView.swift */,
+			);
+			name = AssetImageView;
+			sourceTree = "<group>";
+		};
+		3180C4B3265A615B002ED550 /* InstructionView */ = {
+			isa = PBXGroup;
+			children = (
+				3180C4BD265A637D002ED550 /* InstructionView.swift */,
+				3180C4C0265A63B1002ED550 /* InstructionView.xib */,
+			);
+			name = InstructionView;
+			sourceTree = "<group>";
+		};
+		31AD655626510F2700EE0202 /* SecondaryButton */ = {
+			isa = PBXGroup;
+			children = (
+				31E47E91264FD5910028B545 /* SecondaryButton.swift */,
+			);
+			name = SecondaryButton;
+			sourceTree = "<group>";
+		};
+		31C3C11A264FAB4700CCD7A9 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3180C4B3265A615B002ED550 /* InstructionView */,
+				312E8FFB265928E400EE0E2D /* KeyboardSpacerView */,
+				312E8FF62659280A00EE0E2D /* DesignableView */,
+				31322B0526512820008D58C1 /* AssetImageView */,
+				31322B0026511CAD008D58C1 /* BaseButton */,
+				31C3C11B264FAB9A00CCD7A9 /* PrimaryButton */,
+				31AD655626510F2700EE0202 /* SecondaryButton */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		31C3C11B264FAB9A00CCD7A9 /* PrimaryButton */ = {
+			isa = PBXGroup;
+			children = (
+				31C3C11C264FABA900CCD7A9 /* PrimaryButton.swift */,
+			);
+			name = PrimaryButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,10 +246,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C3C121264FBF6500CCD7A9 /* Yuanti.ttc in Resources */,
 				312A96232646A604008C2278 /* LaunchScreen.storyboard in Resources */,
 				312A96352646A6D1008C2278 /* InfoPlist.strings in Resources */,
+				3180C4C9265A952A002ED550 /* Localizable.strings in Resources */,
 				312A96202646A604008C2278 /* Assets.xcassets in Resources */,
 				312A961E2646A603008C2278 /* Main.storyboard in Resources */,
+				3180C4C1265A63B1002ED550 /* InstructionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,9 +263,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312E8FF42659107C00EE0E2D /* PlayersNavigationController.swift in Sources */,
+				3180C4C4265A8E32002ED550 /* PlayersAddViewController.swift in Sources */,
+				31322B0726512834008D58C1 /* AssetImageView.swift in Sources */,
+				31E47E92264FD5910028B545 /* SecondaryButton.swift in Sources */,
 				312A961B2646A603008C2278 /* MainMenuViewController.swift in Sources */,
 				312A96172646A603008C2278 /* AppDelegate.swift in Sources */,
+				31C3C11D264FABA900CCD7A9 /* PrimaryButton.swift in Sources */,
+				31322B0226511CC5008D58C1 /* BaseButton.swift in Sources */,
+				312E8FFD265928FB00EE0E2D /* KeyboardSpacerView.swift in Sources */,
+				3180C4BE265A637D002ED550 /* InstructionView.swift in Sources */,
 				312A96192646A603008C2278 /* SceneDelegate.swift in Sources */,
+				312E8FF82659281F00EE0E2D /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,10 +302,17 @@
 		312A96372646A6D1008C2278 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				312A96362646A6D1008C2278 /* en */,
 				312A96392646A6D4008C2278 /* ja */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3180C4CB265A952A002ED550 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3180C4CA265A952A002ED550 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -316,6 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = K334V22YZ3;
 				INFOPLIST_FILE = AppCreating1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -337,6 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = K334V22YZ3;
 				INFOPLIST_FILE = AppCreating1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

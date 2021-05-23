@@ -1,6 +1,21 @@
-/* Class = "UIButton"; normalTitle = "Introduction"; ObjectID = "4Pf-wM-5rL"; */
-"4Pf-wM-5rL.normalTitle" = "説明";
+/* Class = "UILabel"; text = "Playere here!"; ObjectID = "2aI-gk-91B"; */
+"2aI-gk-91B.text" = "人でゲームを始める";
 
-/* Class = "UIButton"; normalTitle = "Game Start"; ObjectID = "jVn-Ry-ODP"; */
+/* Class = "UIButton"; normalTitle = "READ INSTRUCTIONS"; ObjectID = "4Pf-wM-5rL"; */
+"4Pf-wM-5rL.normalTitle" = "説明を読む";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "6x9-Va-dqN"; */
+"6x9-Va-dqN.normalTitle" = "次へ";
+
+/* Class = "UINavigationItem"; title = "Players Settings"; ObjectID = "dev-c3-Khm"; */
+"dev-c3-Khm.title" = "プレイヤー設定";
+
+/* Class = "UIButton"; normalTitle = "WATCH TUTORIAL"; ObjectID = "Ez8-fV-76C"; */
+"Ez8-fV-76C.normalTitle" = "説明をYouTubeで見る";
+
+/* Class = "UIButton"; normalTitle = "GAME START"; ObjectID = "jVn-Ry-ODP"; */
 "jVn-Ry-ODP.normalTitle" = "ゲームを始める";
+
+/* Class = "UILabel"; text = "We have"; ObjectID = "xXx-yO-ouu"; */
+"xXx-yO-ouu.text" = "今回は";
 
