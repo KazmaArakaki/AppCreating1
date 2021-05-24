@@ -1,6 +1,0 @@
-/* [PlayersAddViewController::viewDidLoad] instruction */
-"Hello!" = "こんにちは！";
-
-/* [PlayersAddViewController::viewDidLoad] instruction */
-"Please tell me how many players are there!" = "何人でゲームを始めますか？";
-
