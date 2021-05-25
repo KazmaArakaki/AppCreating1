@@ -28,6 +28,15 @@ $pageTitle = !empty($this->fetch('pageTitle')) ? implode(' | ', [
               <?= __('管理者') ?>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="<?= $this->Url->build([
+              'controller' => 'Topics',
+              'action' => 'index',
+            ]) ?>" class="nav-link <?= $this->request->getParam('controller') === 'Topics' ? 'active' : '' ?>">
+              <?= __('トピック') ?>
+            </a>
+          </li>
         </ul>
 
         <a href="<?= $this->Url->build([
