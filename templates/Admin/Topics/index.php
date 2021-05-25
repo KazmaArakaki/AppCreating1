@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mb-4">
   <div class="col-auto">
     <a href="<?= $this->Url->build([
       'action' => 'create',

@@ -1,3 +1,13 @@
+<div class="row mb-4">
+  <div class="col-auto">
+    <a href="<?= $this->Url->build([
+      'action' => 'create',
+    ]) ?>" class="btn btn-primary">
+      <?= __('追加') ?>
+    </a>
+  </div>
+</div>
+
 <table class="table table-bordered table-striped table-hover table-sm">
   <tbody>
     <?php foreach ($administrators as $administrator): ?>
