@@ -15,6 +15,15 @@ $routes->scope('/', function (RouteBuilder $builder) {
   $builder->fallbacks();
 });
 
+$routes->prefix('Admin', function (RouteBuilder $builder) {
+  $builder->connect('/', [
+    'controller' => 'Home',
+    'action' => 'index',
+  ]);
+
+  $builder->fallbacks();
+});
+
 $routes->prefix('Api', function (RouteBuilder $builder) {
   $builder->setExtensions(['json']);
 
