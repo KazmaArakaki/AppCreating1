@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,11 @@
 		3180C4C1265A63B1002ED550 /* InstructionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3180C4C0265A63B1002ED550 /* InstructionView.xib */; };
 		3180C4C4265A8E32002ED550 /* PlayersAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */; };
 		3180C4C9265A952A002ED550 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3180C4CB265A952A002ED550 /* Localizable.strings */; };
+		319B426A265E48D900F39191 /* TopicRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4269265E48D900F39191 /* TopicRegistry.swift */; };
+		319B426D265E4BC500F39191 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B426C265E4BC500F39191 /* Topic.swift */; };
+		31A80CA1265E3BE70018BBD4 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A80CA0265E3BE70018BBD4 /* NotificationName.swift */; };
+		31A80CA5265E3F4C0018BBD4 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A80CA4265E3F4C0018BBD4 /* ActivityIndicatorView.swift */; };
+		31A80CA9265E3F6E0018BBD4 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A80CA8265E3F6E0018BBD4 /* ActivityIndicatorView.xib */; };
 		31C3C11D264FABA900CCD7A9 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C3C11C264FABA900CCD7A9 /* PrimaryButton.swift */; };
 		31C3C121264FBF6500CCD7A9 /* Yuanti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 31C3C120264FBF6500CCD7A9 /* Yuanti.ttc */; };
 		31E47E92264FD5910028B545 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E47E91264FD5910028B545 /* SecondaryButton.swift */; };
@@ -52,6 +57,11 @@
 		3180C4C0265A63B1002ED550 /* InstructionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionView.xib; sourceTree = "<group>"; };
 		3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersAddViewController.swift; sourceTree = "<group>"; };
 		3180C4CA265A952A002ED550 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		319B4269265E48D900F39191 /* TopicRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicRegistry.swift; sourceTree = "<group>"; };
+		319B426C265E4BC500F39191 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		31A80CA0265E3BE70018BBD4 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		31A80CA4265E3F4C0018BBD4 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		31A80CA8265E3F6E0018BBD4 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
 		31C3C11C264FABA900CCD7A9 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		31C3C120264FBF6500CCD7A9 /* Yuanti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuanti.ttc; sourceTree = "<group>"; };
 		31E47E91264FD5910028B545 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -100,6 +110,7 @@
 				312A96242646A604008C2278 /* Info.plist */,
 				312A96372646A6D1008C2278 /* InfoPlist.strings */,
 				3180C4CB265A952A002ED550 /* Localizable.strings */,
+				319B4267265E485400F39191 /* Models */,
 				31F046A3265DDD1E001FB7A9 /* ApiClients */,
 				312A962C2646A637008C2278 /* Controllers */,
 				31C3C11A264FAB4700CCD7A9 /* CustomViews */,
@@ -149,6 +160,7 @@
 		31322B042651279C008D58C1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				31A80CA0265E3BE70018BBD4 /* NotificationName.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -170,6 +182,32 @@
 			name = InstructionView;
 			sourceTree = "<group>";
 		};
+		319B4267265E485400F39191 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				319B4268265E486300F39191 /* Registries */,
+				319B426C265E4BC500F39191 /* Topic.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		319B4268265E486300F39191 /* Registries */ = {
+			isa = PBXGroup;
+			children = (
+				319B4269265E48D900F39191 /* TopicRegistry.swift */,
+			);
+			name = Registries;
+			sourceTree = "<group>";
+		};
+		31A80CA3265E3F350018BBD4 /* ActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				31A80CA4265E3F4C0018BBD4 /* ActivityIndicatorView.swift */,
+				31A80CA8265E3F6E0018BBD4 /* ActivityIndicatorView.xib */,
+			);
+			name = ActivityIndicatorView;
+			sourceTree = "<group>";
+		};
 		31AD655626510F2700EE0202 /* SecondaryButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +219,7 @@
 		31C3C11A264FAB4700CCD7A9 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				31A80CA3265E3F350018BBD4 /* ActivityIndicatorView */,
 				3180C4B3265A615B002ED550 /* InstructionView */,
 				312E8FFB265928E400EE0E2D /* KeyboardSpacerView */,
 				312E8FF62659280A00EE0E2D /* DesignableView */,
@@ -215,7 +254,6 @@
 				A026AE652640FD13669B2A6D /* Pods-AppCreating1.debug.xcconfig */,
 				A16AA608926168AE6658AEAD /* Pods-AppCreating1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -294,6 +332,7 @@
 				312A96202646A604008C2278 /* Assets.xcassets in Resources */,
 				312A961E2646A603008C2278 /* Main.storyboard in Resources */,
 				3180C4C1265A63B1002ED550 /* InstructionView.xib in Resources */,
+				31A80CA9265E3F6E0018BBD4 /* ActivityIndicatorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31F046A5265DDD50001FB7A9 /* AbstractApiClient.swift in Sources */,
+				319B426D265E4BC500F39191 /* Topic.swift in Sources */,
 				312E8FF42659107C00EE0E2D /* PlayersNavigationController.swift in Sources */,
 				3180C4C4265A8E32002ED550 /* PlayersAddViewController.swift in Sources */,
 				31322B0726512834008D58C1 /* AssetImageView.swift in Sources */,
@@ -357,8 +397,11 @@
 				31C3C11D264FABA900CCD7A9 /* PrimaryButton.swift in Sources */,
 				31322B0226511CC5008D58C1 /* BaseButton.swift in Sources */,
 				312E8FFD265928FB00EE0E2D /* KeyboardSpacerView.swift in Sources */,
+				31A80CA5265E3F4C0018BBD4 /* ActivityIndicatorView.swift in Sources */,
 				3180C4BE265A637D002ED550 /* InstructionView.swift in Sources */,
 				312A96192646A603008C2278 /* SceneDelegate.swift in Sources */,
+				31A80CA1265E3BE70018BBD4 /* NotificationName.swift in Sources */,
+				319B426A265E48D900F39191 /* TopicRegistry.swift in Sources */,
 				312E8FF82659281F00EE0E2D /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

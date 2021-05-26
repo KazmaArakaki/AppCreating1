@@ -19,7 +19,7 @@ class InstructionView: UIView {
         initialize()
     }
 
-    override class func prepareForInterfaceBuilder() {
+    override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
 
         initialize()
