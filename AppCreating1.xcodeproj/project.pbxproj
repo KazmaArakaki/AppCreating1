@@ -89,9 +89,9 @@
 				312A96242646A604008C2278 /* Info.plist */,
 				312A96372646A6D1008C2278 /* InfoPlist.strings */,
 				3180C4CB265A952A002ED550 /* Localizable.strings */,
-				312A962C2646A637008C2278 /* Controller */,
-				31C3C11A264FAB4700CCD7A9 /* CustomView */,
-				31322B042651279C008D58C1 /* Extension */,
+				312A962C2646A637008C2278 /* Controllers */,
+				31C3C11A264FAB4700CCD7A9 /* CustomViews */,
+				31322B042651279C008D58C1 /* Extensions */,
 				312A961C2646A603008C2278 /* Main.storyboard */,
 				312A96212646A604008C2278 /* LaunchScreen.storyboard */,
 				312A961F2646A604008C2278 /* Assets.xcassets */,
@@ -100,14 +100,14 @@
 			path = AppCreating1;
 			sourceTree = "<group>";
 		};
-		312A962C2646A637008C2278 /* Controller */ = {
+		312A962C2646A637008C2278 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				312A961A2646A603008C2278 /* MainMenuViewController.swift */,
 				312E8FF32659107C00EE0E2D /* PlayersNavigationController.swift */,
 				3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */,
 			);
-			name = Controller;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		312E8FF62659280A00EE0E2D /* DesignableView */ = {
@@ -134,11 +134,11 @@
 			name = BaseButton;
 			sourceTree = "<group>";
 		};
-		31322B042651279C008D58C1 /* Extension */ = {
+		31322B042651279C008D58C1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Extension;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		31322B0526512820008D58C1 /* AssetImageView */ = {
@@ -166,7 +166,7 @@
 			name = SecondaryButton;
 			sourceTree = "<group>";
 		};
-		31C3C11A264FAB4700CCD7A9 /* CustomView */ = {
+		31C3C11A264FAB4700CCD7A9 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				3180C4B3265A615B002ED550 /* InstructionView */,
@@ -177,7 +177,7 @@
 				31C3C11B264FAB9A00CCD7A9 /* PrimaryButton */,
 				31AD655626510F2700EE0202 /* SecondaryButton */,
 			);
-			name = CustomView;
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 		31C3C11B264FAB9A00CCD7A9 /* PrimaryButton */ = {
