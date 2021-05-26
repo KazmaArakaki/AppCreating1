@@ -29,9 +29,28 @@ class MainMenuViewController: UIViewController {
                     return
                 }
 
-                DispatchQueue.main.async {
-                    UIApplication.shared.windows.first?.rootViewController = playersNavigationViewController
-                }
+                QuestionRegistry.shared.fetch(callback: { (success) in
+                    guard success else {
+                        DispatchQueue.main.async {
+                            let title = NSLocalizedString("Error", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
+                            let message = NSLocalizedString("Failed to fetch data from server", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
+
+                            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+                            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+
+                            self.present(alertController, animated: true, completion: nil)
+
+                            activityIndicatorView.removeFromSuperview()
+                        }
+
+                        return
+                    }
+
+                    DispatchQueue.main.async {
+                        UIApplication.shared.windows.first?.rootViewController = playersNavigationViewController
+                    }
+                })
             })
         }
     }

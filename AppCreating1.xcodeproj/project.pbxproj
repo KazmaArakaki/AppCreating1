@@ -26,6 +26,9 @@
 		3180C4C9265A952A002ED550 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3180C4CB265A952A002ED550 /* Localizable.strings */; };
 		319B426A265E48D900F39191 /* TopicRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4269265E48D900F39191 /* TopicRegistry.swift */; };
 		319B426D265E4BC500F39191 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B426C265E4BC500F39191 /* Topic.swift */; };
+		319B4270265E595200F39191 /* QuestionsIndexApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B426F265E595200F39191 /* QuestionsIndexApiClient.swift */; };
+		319B4273265E59BC00F39191 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4272265E59BC00F39191 /* Question.swift */; };
+		319B4276265E59DD00F39191 /* QuestionRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4275265E59DD00F39191 /* QuestionRegistry.swift */; };
 		31A80CA1265E3BE70018BBD4 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A80CA0265E3BE70018BBD4 /* NotificationName.swift */; };
 		31A80CA5265E3F4C0018BBD4 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A80CA4265E3F4C0018BBD4 /* ActivityIndicatorView.swift */; };
 		31A80CA9265E3F6E0018BBD4 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A80CA8265E3F6E0018BBD4 /* ActivityIndicatorView.xib */; };
@@ -59,6 +62,9 @@
 		3180C4CA265A952A002ED550 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		319B4269265E48D900F39191 /* TopicRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicRegistry.swift; sourceTree = "<group>"; };
 		319B426C265E4BC500F39191 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		319B426F265E595200F39191 /* QuestionsIndexApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsIndexApiClient.swift; sourceTree = "<group>"; };
+		319B4272265E59BC00F39191 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		319B4275265E59DD00F39191 /* QuestionRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRegistry.swift; sourceTree = "<group>"; };
 		31A80CA0265E3BE70018BBD4 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		31A80CA4265E3F4C0018BBD4 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		31A80CA8265E3F6E0018BBD4 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 			children = (
 				319B4268265E486300F39191 /* Registries */,
 				319B426C265E4BC500F39191 /* Topic.swift */,
+				319B4272265E59BC00F39191 /* Question.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -195,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				319B4269265E48D900F39191 /* TopicRegistry.swift */,
+				319B4275265E59DD00F39191 /* QuestionRegistry.swift */,
 			);
 			name = Registries;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 			children = (
 				31F046A4265DDD50001FB7A9 /* AbstractApiClient.swift */,
 				31F046A8265DDE00001FB7A9 /* TopicsIndexApiClient.swift */,
+				319B426F265E595200F39191 /* QuestionsIndexApiClient.swift */,
 			);
 			name = ApiClients;
 			sourceTree = "<group>";
@@ -389,6 +398,8 @@
 				319B426D265E4BC500F39191 /* Topic.swift in Sources */,
 				312E8FF42659107C00EE0E2D /* PlayersNavigationController.swift in Sources */,
 				3180C4C4265A8E32002ED550 /* PlayersAddViewController.swift in Sources */,
+				319B4270265E595200F39191 /* QuestionsIndexApiClient.swift in Sources */,
+				319B4273265E59BC00F39191 /* Question.swift in Sources */,
 				31322B0726512834008D58C1 /* AssetImageView.swift in Sources */,
 				31F046A9265DDE00001FB7A9 /* TopicsIndexApiClient.swift in Sources */,
 				31E47E92264FD5910028B545 /* SecondaryButton.swift in Sources */,
@@ -402,6 +413,7 @@
 				312A96192646A603008C2278 /* SceneDelegate.swift in Sources */,
 				31A80CA1265E3BE70018BBD4 /* NotificationName.swift in Sources */,
 				319B426A265E48D900F39191 /* TopicRegistry.swift in Sources */,
+				319B4276265E59DD00F39191 /* QuestionRegistry.swift in Sources */,
 				312E8FF82659281F00EE0E2D /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
