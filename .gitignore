@@ -1,3 +1,5 @@
+Localization/
+Pods/
 .DS_Store
-Localization
+Podfile.lock
 

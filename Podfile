@@ -6,5 +6,6 @@ target 'AppCreating1' do
   use_frameworks!
 
   # Pods for AppCreating1
+  pod 'YMTGetDeviceName'
 
 end
