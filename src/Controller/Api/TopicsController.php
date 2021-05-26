@@ -15,6 +15,7 @@ class TopicsController extends ApiController {
     $topicsData = $this->Topics->find()
         ->map(function ($topic) {
           return [
+            'uuid' => $topic['uuid'],
             'title' => h($topic['title']),
           ];
         })
