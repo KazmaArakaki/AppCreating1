@@ -1,5 +1,20 @@
+/* [MainMenuViewController::startGameButtonTouchUpInside] alert */
+"Error" = "エラー";
+
+/* [MainMenuViewController::startGameButtonTouchUpInside] alert */
+"Failed to fetch data from server" = "サーバーからデータを取得できませんでした。";
+
+/* No comment provided by engineer. */
+"Failed to read data from response." = "データを読み取れませんでした。";
+
 /* [PlayersAddViewController::viewDidLoad] instruction */
 "Hello!" = "こんにちは！";
+
+/* [PlayerEditNameTableViewCell::layoutSubviews] player name field label */
+"Player %d Name" = "プレイヤー%dの名前";
+
+/* [PlayersEditNameViewController::viewDidLoad] instruction */
+"Please input players' name!" = "プレイヤーの名前を教えてください。";
 
 /* [PlayersAddViewController::viewDidLoad] instruction */
 "Please tell me how many players are there!" = "何人でゲームを始めますか？";

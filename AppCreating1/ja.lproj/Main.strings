@@ -16,6 +16,15 @@
 /* Class = "UIButton"; normalTitle = "GAME START"; ObjectID = "jVn-Ry-ODP"; */
 "jVn-Ry-ODP.normalTitle" = "ゲームを始める";
 
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "kBV-nA-oAK"; */
+"kBV-nA-oAK.title" = "戻る";
+
+/* Class = "UINavigationItem"; title = "Players Settings"; ObjectID = "leA-hV-OTf"; */
+"leA-hV-OTf.title" = "プレイヤー設定";
+
 /* Class = "UILabel"; text = "We have"; ObjectID = "xXx-yO-ouu"; */
 "xXx-yO-ouu.text" = "今回は";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "yRy-WT-LGS"; */
+"yRy-WT-LGS.normalTitle" = "次へ";
 

@@ -1,6 +1,8 @@
 import UIKit
 
 class KeyboardSpacerView: UIView {
+    var minHeight: CGFloat = 0
+
     private var heightConstraint: NSLayoutConstraint!
 
     required init?(coder: NSCoder) {
@@ -18,16 +20,16 @@ class KeyboardSpacerView: UIView {
     private func commonInit() {
         removeConstraints(constraints)
 
-        heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 0)
+        heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: minHeight)
 
         addConstraint(heightConstraint)
 
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrameHandler(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
 
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHideHandler(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    @objc private func keyboardWillChangeFrameHandler(notification: Notification) {
+    @objc private func keyboardWillChangeFrame(notification: Notification) {
         guard
             let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
             let keyboardAnimationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
@@ -40,7 +42,7 @@ class KeyboardSpacerView: UIView {
         })
     }
 
-    @objc private func keyboardWillHideHandler(notification: Notification) {
+    @objc private func keyboardWillHide(notification: Notification) {
         guard
             let keyboardAnimationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
         else {
@@ -48,7 +50,7 @@ class KeyboardSpacerView: UIView {
         }
 
         UIView.animate(withDuration: keyboardAnimationDuration, animations: {
-            self.heightConstraint.constant = 0
+            self.heightConstraint.constant = self.minHeight
         })
     }
 }

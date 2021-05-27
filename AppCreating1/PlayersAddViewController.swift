@@ -4,10 +4,13 @@ class PlayersAddViewController: UIViewController {
     @IBOutlet weak var playerCountPicker: UIPickerView!
     @IBOutlet weak var instructionView: InstructionView!
 
-    private var playerCountPickerOptions = [Int](1...100)
+    private var playerCountPickerOptions = [Int](2...100)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(gameSessionPlayerAdded(_:)), name: .GameSessionPlayerAdded, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(gameSessionPlayerRemoved(_:)), name: .GameSessionPlayerRemoved, object: nil)
 
         playerCountPicker.delegate = self
         playerCountPicker.dataSource = self
@@ -16,14 +19,42 @@ class PlayersAddViewController: UIViewController {
             NSLocalizedString("Hello!", comment: "[PlayersAddViewController::viewDidLoad] instruction"),
             NSLocalizedString("Please tell me how many players are there!", comment: "[PlayersAddViewController::viewDidLoad] instruction"),
         ])
+
+        GameSession.current.addPlayer()
+        GameSession.current.addPlayer()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let playersEditNameViewController = segue.destination as? PlayersEditNameViewController {
+            let selectedRow = playerCountPicker.selectedRow(inComponent: 0)
+            let playerCount = playerCountPickerOptions[selectedRow]
+
+            if playerCount > GameSession.current.players.count {
+                while GameSession.current.players.count != playerCount {
+                    GameSession.current.addPlayer()
+                }
+            } else if playerCount < GameSession.current.players.count {
+                while GameSession.current.players.count != playerCount  {
+                    GameSession.current.popPlayer()
+                }
+            }
+        }
     }
 
     @IBAction func submitButtonTouchUpInside(_ sender: UIButton) {
-        let alertController = UIAlertController(title: nil, message: "Under Development", preferredStyle: .alert)
+        performSegue(withIdentifier: "PlayersEditName", sender: nil)
+    }
 
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+    @objc private func gameSessionPlayerAdded(_ sender: Notification) {
+        if let playerCountPickerOptionIndex = playerCountPickerOptions.firstIndex(of: GameSession.current.players.count) {
+            playerCountPicker.selectRow(playerCountPickerOptionIndex, inComponent: 0, animated: false)
+        }
+    }
 
-        present(alertController, animated: true, completion: nil)
+    @objc private func gameSessionPlayerRemoved(_ sender: Notification) {
+        if let playerCountPickerOptionIndex = playerCountPickerOptions.firstIndex(of: GameSession.current.players.count) {
+            playerCountPicker.selectRow(playerCountPickerOptionIndex, inComponent: 0, animated: false)
+        }
     }
 }
 

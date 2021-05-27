@@ -144,7 +144,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxP-gh-zrF" userLabel="Instruction View" customClass="InstructionView" customModule="AppCreating1" customModuleProvider="target">
-                                <rect key="frame" x="24" y="634" width="327" height="120"/>
+                                <rect key="frame" x="16" y="642" width="343" height="120"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="QUK-q2-Tqn"/>
@@ -155,25 +155,100 @@
                         <color key="backgroundColor" name="PaleBlue"/>
                         <constraints>
                             <constraint firstItem="OwZ-Rf-Rg4" firstAttribute="top" secondItem="17Y-N6-pvp" secondAttribute="top" constant="48" id="8ql-lq-eXp"/>
-                            <constraint firstItem="xxP-gh-zrF" firstAttribute="leading" secondItem="17Y-N6-pvp" secondAttribute="leading" constant="24" id="LHI-PN-jze"/>
+                            <constraint firstItem="xxP-gh-zrF" firstAttribute="leading" secondItem="17Y-N6-pvp" secondAttribute="leading" constant="16" id="LHI-PN-jze"/>
                             <constraint firstItem="6x9-Va-dqN" firstAttribute="trailing" secondItem="17Y-N6-pvp" secondAttribute="trailing" constant="-24" id="W49-Ob-TTK"/>
                             <constraint firstItem="6x9-Va-dqN" firstAttribute="top" secondItem="OwZ-Rf-Rg4" secondAttribute="bottom" constant="24" id="c3O-sa-NyU"/>
                             <constraint firstItem="OwZ-Rf-Rg4" firstAttribute="leading" secondItem="17Y-N6-pvp" secondAttribute="leading" constant="24" id="dXB-CH-unJ"/>
                             <constraint firstItem="OwZ-Rf-Rg4" firstAttribute="trailing" secondItem="17Y-N6-pvp" secondAttribute="trailing" constant="-24" id="fWi-e2-oBw"/>
-                            <constraint firstItem="xxP-gh-zrF" firstAttribute="bottom" secondItem="17Y-N6-pvp" secondAttribute="bottom" constant="-24" id="qpo-VA-rTx"/>
+                            <constraint firstItem="xxP-gh-zrF" firstAttribute="bottom" secondItem="17Y-N6-pvp" secondAttribute="bottom" constant="-16" id="qpo-VA-rTx"/>
                             <constraint firstItem="6x9-Va-dqN" firstAttribute="leading" secondItem="17Y-N6-pvp" secondAttribute="leading" constant="24" id="yUG-rr-cgW"/>
-                            <constraint firstItem="xxP-gh-zrF" firstAttribute="trailing" secondItem="17Y-N6-pvp" secondAttribute="trailing" constant="-24" id="zZV-P8-SGb"/>
+                            <constraint firstItem="xxP-gh-zrF" firstAttribute="trailing" secondItem="17Y-N6-pvp" secondAttribute="trailing" constant="-16" id="zZV-P8-SGb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Players Settings" id="dev-c3-Khm"/>
+                    <navigationItem key="navigationItem" title="Players Settings" id="dev-c3-Khm">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="kBV-nA-oAK"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="instructionView" destination="xxP-gh-zrF" id="3L5-df-wXy"/>
                         <outlet property="playerCountPicker" destination="dwf-AU-Kzm" id="dM7-m6-L3i"/>
+                        <segue destination="Zjv-wK-8oI" kind="show" identifier="PlayersEditName" id="evT-kW-qdP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yki-Nf-EjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2906" y="867"/>
+        </scene>
+        <!--Players Edit Name-->
+        <scene sceneID="9yB-st-PZx">
+            <objects>
+                <viewController id="Zjv-wK-8oI" userLabel="Players Edit Name" customClass="PlayersEditNameViewController" customModule="AppCreating1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bf6-6n-t7v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f3q-fF-L0Y" userLabel="Player Edit Name Table">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="HQW-hu-PH5" userLabel="Player Edit Name Table Footer">
+                                    <rect key="frame" x="0.0" y="99.666667938232422" width="375" height="108"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRy-WT-LGS" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
+                                            <rect key="frame" x="24" y="24" width="327" height="30"/>
+                                            <state key="normal" title="Next"/>
+                                            <connections>
+                                                <action selector="submitButtonTouchUpInside:" destination="Zjv-wK-8oI" eventType="touchUpInside" id="Req-0a-Rf6"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="yRy-WT-LGS" firstAttribute="trailing" secondItem="HQW-hu-PH5" secondAttribute="trailing" constant="-24" id="Psv-cB-yvy"/>
+                                        <constraint firstItem="yRy-WT-LGS" firstAttribute="leading" secondItem="HQW-hu-PH5" secondAttribute="leading" constant="24" id="gcQ-ZL-Cgg"/>
+                                        <constraint firstItem="yRy-WT-LGS" firstAttribute="top" secondItem="HQW-hu-PH5" secondAttribute="top" constant="24" id="oSd-zz-dVN"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7h9-9d-95z">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7h9-9d-95z" id="XVQ-hd-dVA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2r-VL-ccV" customClass="InstructionView" customModule="AppCreating1" customModuleProvider="target">
+                                <rect key="frame" x="16" y="642" width="343" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="35f-Oa-NyB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZDt-r1-LiA"/>
+                        <color key="backgroundColor" name="PaleBlue"/>
+                        <constraints>
+                            <constraint firstItem="f3q-fF-L0Y" firstAttribute="trailing" secondItem="ZDt-r1-LiA" secondAttribute="trailing" id="3Zw-OJ-GpA"/>
+                            <constraint firstItem="d2r-VL-ccV" firstAttribute="leading" secondItem="ZDt-r1-LiA" secondAttribute="leading" constant="16" id="G9B-xk-hLp"/>
+                            <constraint firstItem="f3q-fF-L0Y" firstAttribute="top" secondItem="ZDt-r1-LiA" secondAttribute="top" id="OqD-xp-m1t"/>
+                            <constraint firstItem="d2r-VL-ccV" firstAttribute="bottom" secondItem="ZDt-r1-LiA" secondAttribute="bottom" constant="-16" id="RFw-m5-Ina"/>
+                            <constraint firstItem="f3q-fF-L0Y" firstAttribute="bottom" secondItem="bf6-6n-t7v" secondAttribute="bottom" id="dzB-Ml-MSY"/>
+                            <constraint firstItem="d2r-VL-ccV" firstAttribute="trailing" secondItem="ZDt-r1-LiA" secondAttribute="trailing" constant="-16" id="jmN-lX-Ojm"/>
+                            <constraint firstItem="f3q-fF-L0Y" firstAttribute="leading" secondItem="ZDt-r1-LiA" secondAttribute="leading" id="sHK-2T-ZHd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Players Settings" id="leA-hV-OTf"/>
+                    <connections>
+                        <outlet property="instructionView" destination="d2r-VL-ccV" id="QFG-bd-43i"/>
+                        <outlet property="playerEditNameTable" destination="f3q-fF-L0Y" id="Jkd-lO-YM1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hie-0w-MKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3762" y="867"/>
         </scene>
         <!--Main Navigation-->
         <scene sceneID="ILl-Dv-SCf">
@@ -227,6 +302,9 @@
         </designable>
         <designable name="jVn-Ry-ODP">
             <size key="intrinsicContentSize" width="135" height="53"/>
+        </designable>
+        <designable name="yRy-WT-LGS">
+            <size key="intrinsicContentSize" width="32" height="30"/>
         </designable>
     </designables>
     <resources>

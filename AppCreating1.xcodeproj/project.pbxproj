@@ -29,6 +29,10 @@
 		319B4270265E595200F39191 /* QuestionsIndexApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B426F265E595200F39191 /* QuestionsIndexApiClient.swift */; };
 		319B4273265E59BC00F39191 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4272265E59BC00F39191 /* Question.swift */; };
 		319B4276265E59DD00F39191 /* QuestionRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4275265E59DD00F39191 /* QuestionRegistry.swift */; };
+		319B4279265E6FF100F39191 /* PlayersEditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4278265E6FF100F39191 /* PlayersEditNameViewController.swift */; };
+		319B427E265E715D00F39191 /* PlayerEditNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B427C265E715D00F39191 /* PlayerEditNameTableViewCell.swift */; };
+		319B427F265E715D00F39191 /* PlayerEditNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 319B427D265E715D00F39191 /* PlayerEditNameTableViewCell.xib */; };
+		319B4284265E855A00F39191 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4283265E855A00F39191 /* GameSession.swift */; };
 		31A80CA1265E3BE70018BBD4 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A80CA0265E3BE70018BBD4 /* NotificationName.swift */; };
 		31A80CA5265E3F4C0018BBD4 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A80CA4265E3F4C0018BBD4 /* ActivityIndicatorView.swift */; };
 		31A80CA9265E3F6E0018BBD4 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A80CA8265E3F6E0018BBD4 /* ActivityIndicatorView.xib */; };
@@ -65,6 +69,10 @@
 		319B426F265E595200F39191 /* QuestionsIndexApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsIndexApiClient.swift; sourceTree = "<group>"; };
 		319B4272265E59BC00F39191 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		319B4275265E59DD00F39191 /* QuestionRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRegistry.swift; sourceTree = "<group>"; };
+		319B4278265E6FF100F39191 /* PlayersEditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersEditNameViewController.swift; sourceTree = "<group>"; };
+		319B427C265E715D00F39191 /* PlayerEditNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEditNameTableViewCell.swift; sourceTree = "<group>"; };
+		319B427D265E715D00F39191 /* PlayerEditNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerEditNameTableViewCell.xib; sourceTree = "<group>"; };
+		319B4283265E855A00F39191 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		31A80CA0265E3BE70018BBD4 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		31A80CA4265E3F4C0018BBD4 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		31A80CA8265E3F6E0018BBD4 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 				312A961A2646A603008C2278 /* MainMenuViewController.swift */,
 				312E8FF32659107C00EE0E2D /* PlayersNavigationController.swift */,
 				3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */,
+				319B4278265E6FF100F39191 /* PlayersEditNameViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 				319B4268265E486300F39191 /* Registries */,
 				319B426C265E4BC500F39191 /* Topic.swift */,
 				319B4272265E59BC00F39191 /* Question.swift */,
+				319B4283265E855A00F39191 /* GameSession.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -205,6 +215,15 @@
 				319B4275265E59DD00F39191 /* QuestionRegistry.swift */,
 			);
 			name = Registries;
+			sourceTree = "<group>";
+		};
+		319B427B265E70FE00F39191 /* PlayerEditNameTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				319B427C265E715D00F39191 /* PlayerEditNameTableViewCell.swift */,
+				319B427D265E715D00F39191 /* PlayerEditNameTableViewCell.xib */,
+			);
+			name = PlayerEditNameTableViewCell;
 			sourceTree = "<group>";
 		};
 		31A80CA3265E3F350018BBD4 /* ActivityIndicatorView */ = {
@@ -227,14 +246,15 @@
 		31C3C11A264FAB4700CCD7A9 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				31A80CA3265E3F350018BBD4 /* ActivityIndicatorView */,
-				3180C4B3265A615B002ED550 /* InstructionView */,
-				312E8FFB265928E400EE0E2D /* KeyboardSpacerView */,
 				312E8FF62659280A00EE0E2D /* DesignableView */,
+				312E8FFB265928E400EE0E2D /* KeyboardSpacerView */,
+				31A80CA3265E3F350018BBD4 /* ActivityIndicatorView */,
 				31322B0526512820008D58C1 /* AssetImageView */,
+				3180C4B3265A615B002ED550 /* InstructionView */,
 				31322B0026511CAD008D58C1 /* BaseButton */,
 				31C3C11B264FAB9A00CCD7A9 /* PrimaryButton */,
 				31AD655626510F2700EE0202 /* SecondaryButton */,
+				319B427B265E70FE00F39191 /* PlayerEditNameTableViewCell */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -338,6 +358,7 @@
 				312A96232646A604008C2278 /* LaunchScreen.storyboard in Resources */,
 				312A96352646A6D1008C2278 /* InfoPlist.strings in Resources */,
 				3180C4C9265A952A002ED550 /* Localizable.strings in Resources */,
+				319B427F265E715D00F39191 /* PlayerEditNameTableViewCell.xib in Resources */,
 				312A96202646A604008C2278 /* Assets.xcassets in Resources */,
 				312A961E2646A603008C2278 /* Main.storyboard in Resources */,
 				3180C4C1265A63B1002ED550 /* InstructionView.xib in Resources */,
@@ -404,11 +425,14 @@
 				31F046A9265DDE00001FB7A9 /* TopicsIndexApiClient.swift in Sources */,
 				31E47E92264FD5910028B545 /* SecondaryButton.swift in Sources */,
 				312A961B2646A603008C2278 /* MainMenuViewController.swift in Sources */,
+				319B4284265E855A00F39191 /* GameSession.swift in Sources */,
 				312A96172646A603008C2278 /* AppDelegate.swift in Sources */,
 				31C3C11D264FABA900CCD7A9 /* PrimaryButton.swift in Sources */,
+				319B4279265E6FF100F39191 /* PlayersEditNameViewController.swift in Sources */,
 				31322B0226511CC5008D58C1 /* BaseButton.swift in Sources */,
 				312E8FFD265928FB00EE0E2D /* KeyboardSpacerView.swift in Sources */,
 				31A80CA5265E3F4C0018BBD4 /* ActivityIndicatorView.swift in Sources */,
+				319B427E265E715D00F39191 /* PlayerEditNameTableViewCell.swift in Sources */,
 				3180C4BE265A637D002ED550 /* InstructionView.swift in Sources */,
 				312A96192646A603008C2278 /* SceneDelegate.swift in Sources */,
 				31A80CA1265E3BE70018BBD4 /* NotificationName.swift in Sources */,
@@ -583,7 +607,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = K334V22YZ3;
 				INFOPLIST_FILE = AppCreating1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -606,7 +630,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = K334V22YZ3;
 				INFOPLIST_FILE = AppCreating1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
