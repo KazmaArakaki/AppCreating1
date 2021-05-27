@@ -111,7 +111,7 @@
                                         </constraints>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players here!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aI-gk-91B" userLabel="Player Count Field Label">
-                                        <rect key="frame" x="24" y="208" width="279" height="28"/>
+                                        <rect key="frame" x="24" y="203.33333333333331" width="279" height="23.333333333333343"/>
                                         <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="20"/>
                                         <color key="textColor" name="Purple"/>
                                         <nil key="highlightedColor"/>
@@ -137,7 +137,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x9-Va-dqN" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                <rect key="frame" x="24" y="410.66666666666669" width="327" height="30"/>
+                                <rect key="frame" x="24" y="410.66666666666669" width="327" height="53"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="submitButtonTouchUpInside:" destination="jgL-8X-d2R" eventType="touchUpInside" id="b5q-FW-iJt"/>
@@ -195,7 +195,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRy-WT-LGS" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                            <rect key="frame" x="24" y="24" width="327" height="30"/>
+                                            <rect key="frame" x="24" y="24" width="327" height="53"/>
                                             <state key="normal" title="Next"/>
                                             <connections>
                                                 <action selector="submitButtonTouchUpInside:" destination="Zjv-wK-8oI" eventType="touchUpInside" id="Req-0a-Rf6"/>
@@ -210,7 +210,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7h9-9d-95z">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7h9-9d-95z">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7h9-9d-95z" id="XVQ-hd-dVA">
@@ -292,7 +292,7 @@
             <size key="intrinsicContentSize" width="201" height="37"/>
         </designable>
         <designable name="6x9-Va-dqN">
-            <size key="intrinsicContentSize" width="32" height="30"/>
+            <size key="intrinsicContentSize" width="68" height="53"/>
         </designable>
         <designable name="DkV-FP-Raj">
             <size key="intrinsicContentSize" width="20" height="20"/>
@@ -304,7 +304,7 @@
             <size key="intrinsicContentSize" width="135" height="53"/>
         </designable>
         <designable name="yRy-WT-LGS">
-            <size key="intrinsicContentSize" width="32" height="30"/>
+            <size key="intrinsicContentSize" width="68" height="53"/>
         </designable>
     </designables>
     <resources>

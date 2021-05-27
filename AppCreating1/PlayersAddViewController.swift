@@ -25,7 +25,7 @@ class PlayersAddViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let playersEditNameViewController = segue.destination as? PlayersEditNameViewController {
+        if let _ = segue.destination as? PlayersEditNameViewController {
             let selectedRow = playerCountPicker.selectedRow(inComponent: 0)
             let playerCount = playerCountPickerOptions[selectedRow]
 

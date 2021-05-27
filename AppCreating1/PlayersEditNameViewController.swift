@@ -13,7 +13,7 @@ class PlayersEditNameViewController: UIViewController {
 
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
 
-        playerEditNameTable.register(UINib(nibName: "PlayerEditNameTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        playerEditNameTable.register(UINib(nibName: "PlayerEditNameTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerEditNameTableViewCell")
 
         playerEditNameTable.dataSource = self
         playerEditNameTable.delegate = self
@@ -79,7 +79,7 @@ extension PlayersEditNameViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = playerEditNameTable.dequeueReusableCell(withIdentifier: "Cell") as! PlayerEditNameTableViewCell
+        let cell = playerEditNameTable.dequeueReusableCell(withIdentifier: "PlayerEditNameTableViewCell") as! PlayerEditNameTableViewCell
 
         cell.delegate = self
         cell.playerIndex = indexPath.row

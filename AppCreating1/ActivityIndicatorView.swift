@@ -35,7 +35,7 @@ class ActivityIndicatorView: UIView {
     private func initialize() {
         translatesAutoresizingMaskIntoConstraints = false
 
-        if let customView = Bundle.main.loadNibNamed("ActivityIndicatorView", owner: self, options: nil)?.first as? UIView {
+        if let customView = Bundle(for: type(of: self)).loadNibNamed("ActivityIndicatorView", owner: self, options: nil)?.first as? UIView {
             customView.translatesAutoresizingMaskIntoConstraints = false
 
             addSubview(customView)

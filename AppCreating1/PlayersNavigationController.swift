@@ -6,7 +6,7 @@ class PlayersNavigationController: UINavigationController {
 
         navigationBar.shadowImage = UIImage()
         navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor(named: "Purple", in: Bundle.main, compatibleWith: nil) as Any,
+            .foregroundColor: UIColor(named: "Purple", in: Bundle(for: type(of: self)), compatibleWith: nil) as Any,
         ]
     }
 }

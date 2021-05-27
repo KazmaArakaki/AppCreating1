@@ -32,7 +32,9 @@ class InstructionView: UIView {
     }
 
     private func initialize() {
-        if let customView = Bundle.main.loadNibNamed("InstructionView", owner: self, options: nil)?.first as? UIView {
+        let bundle = Bundle(for: type(of: self))
+
+        if let customView = bundle.loadNibNamed("InstructionView", owner: self, options: nil)?.first as? UIView {
             customView.frame = bounds
 
             addSubview(customView)
