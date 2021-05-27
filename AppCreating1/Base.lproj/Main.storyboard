@@ -110,8 +110,8 @@
                                             <constraint firstAttribute="height" constant="160" id="KqV-73-4tS"/>
                                         </constraints>
                                     </pickerView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playere here!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aI-gk-91B" userLabel="Player Count Field Label">
-                                        <rect key="frame" x="24" y="203.33333333333331" width="279" height="23.333333333333343"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players here!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aI-gk-91B" userLabel="Player Count Field Label">
+                                        <rect key="frame" x="24" y="208" width="279" height="28"/>
                                         <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="20"/>
                                         <color key="textColor" name="Purple"/>
                                         <nil key="highlightedColor"/>
