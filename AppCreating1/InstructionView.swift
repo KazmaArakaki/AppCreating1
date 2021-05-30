@@ -2,10 +2,17 @@ import UIKit
 
 @IBDesignable
 class InstructionView: UIView {
+    struct Instruction {
+        let image: UIImage?
+        let message: String
+    }
+
+    @IBOutlet weak var charactorPreview: UIImageView!
     @IBOutlet weak var instructionText: UILabel!
     @IBOutlet weak var indicator: UIImageView!
 
-    private var instructions: [String] = []
+    private var instructions: [Instruction] = []
+    private var instructionIndex = 0
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -25,10 +32,12 @@ class InstructionView: UIView {
         initialize()
     }
 
-    func setInstructions(_ instructions: [String]) {
+    func setInstructions(_ instructions: [Instruction]) {
         self.instructions = instructions
 
-        instructionText.text = instructions.first
+        charactorPreview.image = instructions.first?.image
+
+        instructionText.text = instructions.first?.message
     }
 
     private func initialize() {
@@ -48,20 +57,12 @@ class InstructionView: UIView {
     }
 
     @objc private func tap(_ sender: UITapGestureRecognizer) {
-        if let currentInstruction = instructionText.text {
-            var nextIndex = 0
+        instructionIndex = (instructionIndex + 1) % instructions.count
 
-            for (index, instruction) in instructions.enumerated() {
-                if instruction == currentInstruction {
-                    nextIndex = (index + 1) % instructions.count
+        if instructions.indices.contains(instructionIndex) {
+            charactorPreview.image = instructions[instructionIndex].image
 
-                    break
-                }
-            }
-
-            if instructions.indices.contains(nextIndex) {
-                instructionText.text = instructions[nextIndex]
-            }
+            instructionText.text = instructions[instructionIndex].message
         }
     }
 }

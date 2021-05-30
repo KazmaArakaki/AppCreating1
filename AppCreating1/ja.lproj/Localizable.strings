@@ -8,14 +8,14 @@
 "Failed to read data from response." = "データを読み取れませんでした。";
 
 /* [PlayersAddViewController::viewDidLoad] instruction */
-"Hello!" = "こんにちは！";
+"First of all, could you tell me how many players are there?" = "まずプレーヤーの人数をお教えいただけますか？";
+
+/* [PlayersAddViewController::viewDidLoad] instruction */
+"Now, let's get the party started!" = "さぁ、これから宴を始めるぞよ";
 
 /* [PlayerEditNameTableViewCell::layoutSubviews] player name field label */
 "Player %d Name" = "プレイヤー%dの名前";
 
 /* [PlayersEditNameViewController::viewDidLoad] instruction */
-"Please input players' name!" = "プレイヤーの名前を教えてください。";
-
-/* [PlayersAddViewController::viewDidLoad] instruction */
-"Please tell me how many players are there!" = "何人でゲームを始めますか？";
+"Well, well, you can tell me your name now!" = "苦しゅうない、それぞれ名前を述べよ。";
 

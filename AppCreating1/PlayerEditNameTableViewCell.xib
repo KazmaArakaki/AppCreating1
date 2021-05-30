@@ -10,7 +10,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Yuanti.ttc">
-            <string>STYuanti-TC-Bold</string>
+            <string>STYuanti-SC-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -28,13 +28,13 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gW-II-4ed" userLabel="Player Name Field Label">
                                 <rect key="frame" x="12" y="12" width="248" height="19"/>
-                                <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="STYuanti-SC-Bold" family="Yuanti SC" pointSize="16"/>
                                 <color key="textColor" name="Purple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTC-Xi-3Aw" userLabel="Player Name Field">
                                 <rect key="frame" x="12" y="35" width="248" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="STYuanti-SC-Bold" family="Yuanti SC" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 <connections>
                                     <action selector="playerNameFieldEditingChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="SGg-68-pRC"/>

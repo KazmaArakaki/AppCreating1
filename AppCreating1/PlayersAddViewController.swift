@@ -16,8 +16,8 @@ class PlayersAddViewController: UIViewController {
         playerCountPicker.dataSource = self
 
         instructionView.setInstructions([
-            NSLocalizedString("Hello!", comment: "[PlayersAddViewController::viewDidLoad] instruction"),
-            NSLocalizedString("Please tell me how many players are there!", comment: "[PlayersAddViewController::viewDidLoad] instruction"),
+            InstructionView.Instruction(image: UIImage(named: "King"), message: NSLocalizedString("Now, let's get the party started!", comment: "[PlayersAddViewController::viewDidLoad] instruction")),
+            InstructionView.Instruction(image: UIImage(named: "Steward"), message: NSLocalizedString("First of all, could you tell me how many players are there?", comment: "[PlayersAddViewController::viewDidLoad] instruction")),
         ])
 
         GameSession.current.addPlayer()

@@ -25,7 +25,7 @@ class PlayersEditNameViewController: UIViewController {
         }
 
         instructionView.setInstructions([
-            NSLocalizedString("Please input players' name!", comment: "[PlayersEditNameViewController::viewDidLoad] instruction"),
+            InstructionView.Instruction(image: UIImage(named: "King"), message: NSLocalizedString("Well, well, you can tell me your name now!", comment: "[PlayersEditNameViewController::viewDidLoad] instruction")),
         ])
     }
 

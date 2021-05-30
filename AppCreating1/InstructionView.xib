@@ -10,12 +10,13 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Yuanti.ttc">
-            <string>STYuanti-TC-Regular</string>
+            <string>STYuanti-SC-Regular</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstructionView" customModule="AppCreating1" customModuleProvider="target">
             <connections>
+                <outlet property="charactorPreview" destination="d4C-Yf-Kkd" id="EOG-Yo-N8t"/>
                 <outlet property="indicator" destination="5wq-hp-KFA" id="eRw-Dv-UmK"/>
                 <outlet property="instructionText" destination="ISn-BK-baV" id="BPa-0I-yRX"/>
             </connections>
@@ -28,7 +29,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKk-y6-ult" userLabel="Balloon View" customClass="DesignableView" customModule="AppCreating1" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="573" height="200"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kappa" translatesAutoresizingMaskIntoConstraints="NO" id="d4C-Yf-Kkd">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4C-Yf-Kkd" userLabel="Charactor Preview">
                             <rect key="frame" x="16" y="60" width="80" height="80"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="KN6-5W-tV2"/>
@@ -43,7 +44,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISn-BK-baV" userLabel="Instruction Text">
                                             <rect key="frame" x="0.0" y="0.0" width="437" height="19"/>
-                                            <fontDescription key="fontDescription" name="STYuanti-TC-Regular" family="Yuanti TC" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="STYuanti-SC-Regular" family="Yuanti SC" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -114,7 +115,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Kappa" width="496" height="674"/>
         <image name="arrowtriangle.down.fill" catalog="system" width="128" height="124"/>
         <namedColor name="Purple">
             <color red="0.45899999141693115" green="0.0080000003799796104" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

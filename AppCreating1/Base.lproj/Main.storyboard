@@ -95,6 +95,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_0" translatesAutoresizingMaskIntoConstraints="NO" id="w9H-Oq-ZOa" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwZ-Rf-Rg4" userLabel="Player Count Field Container" customClass="DesignableView" customModule="AppCreating1" customModuleProvider="target">
                                 <rect key="frame" x="24" y="136" width="327" height="250.66666666666663"/>
                                 <subviews>
@@ -156,11 +159,15 @@
                         <constraints>
                             <constraint firstItem="OwZ-Rf-Rg4" firstAttribute="top" secondItem="17Y-N6-pvp" secondAttribute="top" constant="48" id="8ql-lq-eXp"/>
                             <constraint firstItem="xxP-gh-zrF" firstAttribute="leading" secondItem="17Y-N6-pvp" secondAttribute="leading" constant="16" id="LHI-PN-jze"/>
+                            <constraint firstItem="w9H-Oq-ZOa" firstAttribute="leading" secondItem="Yb8-Ge-FX5" secondAttribute="leading" id="P96-AW-fAv"/>
+                            <constraint firstItem="w9H-Oq-ZOa" firstAttribute="top" secondItem="Yb8-Ge-FX5" secondAttribute="top" id="VRe-Kh-Hxp"/>
                             <constraint firstItem="6x9-Va-dqN" firstAttribute="trailing" secondItem="17Y-N6-pvp" secondAttribute="trailing" constant="-24" id="W49-Ob-TTK"/>
                             <constraint firstItem="6x9-Va-dqN" firstAttribute="top" secondItem="OwZ-Rf-Rg4" secondAttribute="bottom" constant="24" id="c3O-sa-NyU"/>
                             <constraint firstItem="OwZ-Rf-Rg4" firstAttribute="leading" secondItem="17Y-N6-pvp" secondAttribute="leading" constant="24" id="dXB-CH-unJ"/>
                             <constraint firstItem="OwZ-Rf-Rg4" firstAttribute="trailing" secondItem="17Y-N6-pvp" secondAttribute="trailing" constant="-24" id="fWi-e2-oBw"/>
+                            <constraint firstItem="w9H-Oq-ZOa" firstAttribute="bottom" secondItem="Yb8-Ge-FX5" secondAttribute="bottom" id="gdw-rW-HLH"/>
                             <constraint firstItem="xxP-gh-zrF" firstAttribute="bottom" secondItem="17Y-N6-pvp" secondAttribute="bottom" constant="-16" id="qpo-VA-rTx"/>
+                            <constraint firstItem="w9H-Oq-ZOa" firstAttribute="trailing" secondItem="Yb8-Ge-FX5" secondAttribute="trailing" id="rqU-5g-m1m"/>
                             <constraint firstItem="6x9-Va-dqN" firstAttribute="leading" secondItem="17Y-N6-pvp" secondAttribute="leading" constant="24" id="yUG-rr-cgW"/>
                             <constraint firstItem="xxP-gh-zrF" firstAttribute="trailing" secondItem="17Y-N6-pvp" secondAttribute="trailing" constant="-16" id="zZV-P8-SGb"/>
                         </constraints>
@@ -186,6 +193,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_0" translatesAutoresizingMaskIntoConstraints="NO" id="k59-hE-fsQ" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f3q-fF-L0Y" userLabel="Player Edit Name Table">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -232,11 +242,15 @@
                         <color key="backgroundColor" name="PaleBlue"/>
                         <constraints>
                             <constraint firstItem="f3q-fF-L0Y" firstAttribute="trailing" secondItem="ZDt-r1-LiA" secondAttribute="trailing" id="3Zw-OJ-GpA"/>
+                            <constraint firstItem="k59-hE-fsQ" firstAttribute="trailing" secondItem="bf6-6n-t7v" secondAttribute="trailing" id="5WG-aH-qbK"/>
+                            <constraint firstItem="k59-hE-fsQ" firstAttribute="bottom" secondItem="bf6-6n-t7v" secondAttribute="bottom" id="DSO-a0-hfz"/>
                             <constraint firstItem="d2r-VL-ccV" firstAttribute="leading" secondItem="ZDt-r1-LiA" secondAttribute="leading" constant="16" id="G9B-xk-hLp"/>
                             <constraint firstItem="f3q-fF-L0Y" firstAttribute="top" secondItem="ZDt-r1-LiA" secondAttribute="top" id="OqD-xp-m1t"/>
                             <constraint firstItem="d2r-VL-ccV" firstAttribute="bottom" secondItem="ZDt-r1-LiA" secondAttribute="bottom" constant="-16" id="RFw-m5-Ina"/>
                             <constraint firstItem="f3q-fF-L0Y" firstAttribute="bottom" secondItem="bf6-6n-t7v" secondAttribute="bottom" id="dzB-Ml-MSY"/>
                             <constraint firstItem="d2r-VL-ccV" firstAttribute="trailing" secondItem="ZDt-r1-LiA" secondAttribute="trailing" constant="-16" id="jmN-lX-Ojm"/>
+                            <constraint firstItem="k59-hE-fsQ" firstAttribute="top" secondItem="bf6-6n-t7v" secondAttribute="top" id="nAA-WU-6lO"/>
+                            <constraint firstItem="k59-hE-fsQ" firstAttribute="leading" secondItem="bf6-6n-t7v" secondAttribute="leading" id="nhU-Qo-LBE"/>
                             <constraint firstItem="f3q-fF-L0Y" firstAttribute="leading" secondItem="ZDt-r1-LiA" secondAttribute="leading" id="sHK-2T-ZHd"/>
                         </constraints>
                     </view>
@@ -308,6 +322,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="Background_0" width="1125" height="2436"/>
         <namedColor name="PaleBlue">
             <color red="0.80000001192092896" green="0.9179999828338623" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

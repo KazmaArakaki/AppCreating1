@@ -10,7 +10,7 @@ class BaseButton: UIButton {
     var borderWidth: CGFloat = 1.5
     var borderOffset: CGFloat = 3.0
 
-    var fontName = "Yuanti TC Bold"
+    var fontName = "Yuanti SC Bold"
     var fontSize: CGFloat = 16.0
     var textColor: UIColor? = UIColor.white
 
