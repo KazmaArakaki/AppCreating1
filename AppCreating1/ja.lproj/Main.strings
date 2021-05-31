@@ -7,8 +7,14 @@
 /* Class = "UIButton"; normalTitle = "Next"; ObjectID = "6x9-Va-dqN"; */
 "6x9-Va-dqN.normalTitle" = "次へ";
 
+/* Class = "UINavigationItem"; title = "Players Settings"; ObjectID = "7zo-HC-X04"; */
+"7zo-HC-X04.title" = "プレイヤー設定";
+
 /* Class = "UINavigationItem"; title = "Players Settings"; ObjectID = "dev-c3-Khm"; */
 "dev-c3-Khm.title" = "プレイヤー設定";
+
+/* Class = "UILabel"; text = "Question"; ObjectID = "e3S-tw-Sm6"; */
+"e3S-tw-Sm6.text" = "質問";
 
 /* Class = "UIButton"; normalTitle = "WATCH TUTORIAL"; ObjectID = "Ez8-fV-76C"; */
 "Ez8-fV-76C.normalTitle" = "説明をYouTubeで見る";
@@ -16,15 +22,24 @@
 /* Class = "UIButton"; normalTitle = "GAME START"; ObjectID = "jVn-Ry-ODP"; */
 "jVn-Ry-ODP.normalTitle" = "ゲームを始める";
 
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "jXd-Kv-kzO"; */
+"jXd-Kv-kzO.title" = "戻る";
+
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "kBV-nA-oAK"; */
 "kBV-nA-oAK.title" = "戻る";
 
 /* Class = "UINavigationItem"; title = "Players Settings"; ObjectID = "leA-hV-OTf"; */
 "leA-hV-OTf.title" = "プレイヤー設定";
 
+/* Class = "UIButton"; normalTitle = "Repick Question!"; ObjectID = "NWs-Du-rcL"; */
+"NWs-Du-rcL.normalTitle" = "別の質問を見る";
+
 /* Class = "UILabel"; text = "We have"; ObjectID = "xXx-yO-ouu"; */
 "xXx-yO-ouu.text" = "今回は";
 
 /* Class = "UIButton"; normalTitle = "Next"; ObjectID = "yRy-WT-LGS"; */
 "yRy-WT-LGS.normalTitle" = "次へ";
+
+/* Class = "UIButton"; normalTitle = "Pick Question!"; ObjectID = "Z2u-Au-nSs"; */
+"Z2u-Au-nSs.normalTitle" = "質問を見る";
 

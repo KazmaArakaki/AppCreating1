@@ -10,11 +10,23 @@
 /* [PlayersAddViewController::viewDidLoad] instruction */
 "First of all, could you tell me how many players are there?" = "まずプレーヤーの人数をお教えいただけますか？";
 
+/* [PlayersChooseDealerController::viewDidLoad] instruction */
+"Next, We choose a dealer. Please tap `Pick Question!` button." = "次に、親決めをいたします。「質問を見る」ボタンをタップしてください。";
+
 /* [PlayersAddViewController::viewDidLoad] instruction */
 "Now, let's get the party started!" = "さぁ、これから宴を始めるぞよ";
 
+/* [PlayersChooseDealerController::viewDidLoad] instruction */
+"OK, Now, you, holding this device and staring at me, answer first!" = "さぁ、お前から答えよ。お前じゃよ、お前。そう、このケータイを持ってワシを見つめとるお前じゃよ。";
+
 /* [PlayerEditNameTableViewCell::layoutSubviews] player name field label */
 "Player %d Name" = "プレイヤー%dの名前";
+
+/* [PlayersChooseDealerController::viewDidLoad] instruction */
+"Please answer the question shown in turn orally." = "次の質問に各位口頭でお答えください。";
+
+/* [PlayersChooseDealerController::viewDidLoad] instruction */
+"The person, who is closest to the condition in the question, is to be the first dealer." = "質問の中の数字、それか条件に一番近い者が最初の親になるぞよ。";
 
 /* [PlayersEditNameViewController::viewDidLoad] instruction */
 "Well, well, you can tell me your name now!" = "苦しゅうない、それぞれ名前を述べよ。";

@@ -6,10 +6,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Yuanti.ttc">
+            <string>STYuanti-SC-Bold</string>
+            <string>STYuanti-SC-Regular</string>
             <string>STYuanti-TC-Bold</string>
         </array>
     </customFonts>
@@ -254,15 +257,117 @@
                             <constraint firstItem="f3q-fF-L0Y" firstAttribute="leading" secondItem="ZDt-r1-LiA" secondAttribute="leading" id="sHK-2T-ZHd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Players Settings" id="leA-hV-OTf"/>
+                    <navigationItem key="navigationItem" title="Players Settings" id="leA-hV-OTf">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="jXd-Kv-kzO"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="instructionView" destination="d2r-VL-ccV" id="QFG-bd-43i"/>
                         <outlet property="playerEditNameTable" destination="f3q-fF-L0Y" id="Jkd-lO-YM1"/>
+                        <segue destination="hHf-dv-o2i" kind="show" identifier="PlayersChooseDealer" id="Cv2-Dj-Rne"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hie-0w-MKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3762" y="867"/>
+        </scene>
+        <!--Players Choose Dealer-->
+        <scene sceneID="Egb-sF-S1h">
+            <objects>
+                <viewController id="hHf-dv-o2i" userLabel="Players Choose Dealer" customClass="PlayersChooseDealerController" customModule="AppCreating1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="toG-3c-eWt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_0" translatesAutoresizingMaskIntoConstraints="NO" id="nC4-2v-r1U" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2u-Au-nSs" userLabel="Pick Question Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
+                                <rect key="frame" x="24" y="112" width="327" height="53"/>
+                                <state key="normal" title="Pick Question!"/>
+                                <connections>
+                                    <action selector="pickQuestionButtonTouchUpInside:" destination="hHf-dv-o2i" eventType="touchUpInside" id="Yd6-nW-mpM"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oU6-cL-O5z" userLabel="Question Text Container" customClass="DesignableView" customModule="AppCreating1" customModuleProvider="target">
+                                <rect key="frame" x="24" y="112.00000000000001" width="327" height="152.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3S-tw-Sm6" userLabel="Question Text Label">
+                                        <rect key="frame" x="123.66666666666666" y="24" width="80" height="23.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="STYuanti-SC-Regular" family="Yuanti SC" pointSize="20"/>
+                                        <color key="textColor" name="Purple"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJY-Jf-9fF" userLabel="Question Text">
+                                        <rect key="frame" x="24" y="67.333333333333343" width="279" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="STYuanti-SC-Bold" family="Yuanti SC" pointSize="24"/>
+                                        <color key="textColor" name="Purple"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWs-Du-rcL" userLabel="Repick Question Button" customClass="SecondaryButton" customModule="AppCreating1" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="91.333333333333343" width="279" height="37"/>
+                                        <state key="normal" title="Repick Question!"/>
+                                        <connections>
+                                            <action selector="repickQuestionButtonTouchUpInside:" destination="hHf-dv-o2i" eventType="touchUpInside" id="1Bv-oT-wHW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="e3S-tw-Sm6" firstAttribute="top" secondItem="oU6-cL-O5z" secondAttribute="top" constant="24" id="8Vp-S2-FNi"/>
+                                    <constraint firstItem="e3S-tw-Sm6" firstAttribute="centerX" secondItem="oU6-cL-O5z" secondAttribute="centerX" id="AjD-au-lJL"/>
+                                    <constraint firstItem="xJY-Jf-9fF" firstAttribute="trailing" secondItem="oU6-cL-O5z" secondAttribute="trailing" constant="-24" id="AlR-9L-84i"/>
+                                    <constraint firstItem="NWs-Du-rcL" firstAttribute="trailing" secondItem="oU6-cL-O5z" secondAttribute="trailing" constant="-24" id="BKw-3K-oXx"/>
+                                    <constraint firstItem="NWs-Du-rcL" firstAttribute="bottom" secondItem="oU6-cL-O5z" secondAttribute="bottom" constant="-24" id="DAO-KK-yPo"/>
+                                    <constraint firstItem="xJY-Jf-9fF" firstAttribute="bottom" secondItem="NWs-Du-rcL" secondAttribute="top" constant="-24" id="du2-Fm-FrT"/>
+                                    <constraint firstItem="xJY-Jf-9fF" firstAttribute="leading" secondItem="oU6-cL-O5z" secondAttribute="leading" constant="24" id="f86-4Y-lba"/>
+                                    <constraint firstItem="e3S-tw-Sm6" firstAttribute="bottom" secondItem="xJY-Jf-9fF" secondAttribute="top" constant="-20" id="oEd-WA-Qpb"/>
+                                    <constraint firstItem="NWs-Du-rcL" firstAttribute="leading" secondItem="oU6-cL-O5z" secondAttribute="leading" constant="24" id="vzc-WM-cFM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah9-sb-33q" customClass="InstructionView" customModule="AppCreating1" customModuleProvider="target">
+                                <rect key="frame" x="16" y="642" width="343" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="gIY-9V-BDn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gFl-Pq-Dzc"/>
+                        <color key="backgroundColor" name="PaleBlue"/>
+                        <constraints>
+                            <constraint firstItem="nC4-2v-r1U" firstAttribute="top" secondItem="toG-3c-eWt" secondAttribute="top" id="7V8-aE-BGV"/>
+                            <constraint firstItem="nC4-2v-r1U" firstAttribute="bottom" secondItem="toG-3c-eWt" secondAttribute="bottom" id="A1c-c5-eju"/>
+                            <constraint firstItem="ah9-sb-33q" firstAttribute="leading" secondItem="gFl-Pq-Dzc" secondAttribute="leading" constant="16" id="ESx-FK-B8U"/>
+                            <constraint firstItem="oU6-cL-O5z" firstAttribute="trailing" secondItem="gFl-Pq-Dzc" secondAttribute="trailing" constant="-24" id="Ggu-uo-k4I"/>
+                            <constraint firstItem="ah9-sb-33q" firstAttribute="bottom" secondItem="gFl-Pq-Dzc" secondAttribute="bottom" constant="-16" id="JZ9-ND-ufM"/>
+                            <constraint firstItem="Z2u-Au-nSs" firstAttribute="trailing" secondItem="gFl-Pq-Dzc" secondAttribute="trailing" constant="-24" id="L4B-y9-WEi"/>
+                            <constraint firstItem="nC4-2v-r1U" firstAttribute="trailing" secondItem="toG-3c-eWt" secondAttribute="trailing" id="TUe-m2-soH"/>
+                            <constraint firstItem="nC4-2v-r1U" firstAttribute="leading" secondItem="toG-3c-eWt" secondAttribute="leading" id="Xpj-5d-GuA"/>
+                            <constraint firstItem="Z2u-Au-nSs" firstAttribute="leading" secondItem="gFl-Pq-Dzc" secondAttribute="leading" constant="24" id="bQN-qa-50B"/>
+                            <constraint firstItem="ah9-sb-33q" firstAttribute="trailing" secondItem="gFl-Pq-Dzc" secondAttribute="trailing" constant="-16" id="bfP-Mt-uPn"/>
+                            <constraint firstItem="Z2u-Au-nSs" firstAttribute="top" secondItem="gFl-Pq-Dzc" secondAttribute="top" constant="24" id="eUR-pI-VdM"/>
+                            <constraint firstItem="oU6-cL-O5z" firstAttribute="top" secondItem="gFl-Pq-Dzc" secondAttribute="top" constant="24" id="lx3-2i-fa2"/>
+                            <constraint firstItem="oU6-cL-O5z" firstAttribute="leading" secondItem="gFl-Pq-Dzc" secondAttribute="leading" constant="24" id="sGL-Qn-PhC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Players Settings" id="7zo-HC-X04"/>
+                    <connections>
+                        <outlet property="instructionView" destination="ah9-sb-33q" id="arA-lW-0Q3"/>
+                        <outlet property="pickQuestionButton" destination="Z2u-Au-nSs" id="xAS-AQ-3Ei"/>
+                        <outlet property="questionText" destination="xJY-Jf-9fF" id="cc1-or-ovA"/>
+                        <outlet property="questionTextContainer" destination="oU6-cL-O5z" id="6qj-nk-hWX"/>
+                        <outlet property="questionTextLabel" destination="e3S-tw-Sm6" id="BsC-B5-Ti7"/>
+                        <outlet property="repickQuestionButton" destination="NWs-Du-rcL" id="ODO-Sx-Q37"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Guu-O9-Mzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4602" y="867"/>
         </scene>
         <!--Main Navigation-->
         <scene sceneID="ILl-Dv-SCf">
@@ -314,6 +419,12 @@
         <designable name="Ez8-fV-76C">
             <size key="intrinsicContentSize" width="175" height="37"/>
         </designable>
+        <designable name="NWs-Du-rcL">
+            <size key="intrinsicContentSize" width="161" height="37"/>
+        </designable>
+        <designable name="Z2u-Au-nSs">
+            <size key="intrinsicContentSize" width="142" height="53"/>
+        </designable>
         <designable name="jVn-Ry-ODP">
             <size key="intrinsicContentSize" width="135" height="53"/>
         </designable>
@@ -329,5 +440,8 @@
         <namedColor name="Purple">
             <color red="0.45899999141693115" green="0.0080000003799796104" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

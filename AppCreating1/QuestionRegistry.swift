@@ -41,4 +41,18 @@ class QuestionRegistry {
             callback?(true)
         })
     }
+
+    func getRandom() -> Question? {
+        guard
+            let jsonData = try? Data(contentsOf: QuestionRegistry.dataFileUrl),
+            let questionsData = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [[String: Any?]],
+            let questionData = questionsData.randomElement()
+        else {
+            return nil
+        }
+
+        let question = Question.fromArray(questionData)
+
+        return question
+    }
 }

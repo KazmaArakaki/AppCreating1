@@ -38,6 +38,9 @@
 		31A80CA9265E3F6E0018BBD4 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A80CA8265E3F6E0018BBD4 /* ActivityIndicatorView.xib */; };
 		31C3C11D264FABA900CCD7A9 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C3C11C264FABA900CCD7A9 /* PrimaryButton.swift */; };
 		31C3C121264FBF6500CCD7A9 /* Yuanti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 31C3C120264FBF6500CCD7A9 /* Yuanti.ttc */; };
+		31C5C8B82664E3FA000A1EF2 /* PlayersChooseDealerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C5C8B72664E3FA000A1EF2 /* PlayersChooseDealerController.swift */; };
+		31C5C8BC2664E889000A1EF2 /* QuestionPickAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C5C8BB2664E889000A1EF2 /* QuestionPickAnimationView.swift */; };
+		31C5C8BF2664E8C8000A1EF2 /* QuestionPickAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C5C8BE2664E8C8000A1EF2 /* QuestionPickAnimationView.xib */; };
 		31E47E92264FD5910028B545 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E47E91264FD5910028B545 /* SecondaryButton.swift */; };
 		31F046A5265DDD50001FB7A9 /* AbstractApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F046A4265DDD50001FB7A9 /* AbstractApiClient.swift */; };
 		31F046A9265DDE00001FB7A9 /* TopicsIndexApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F046A8265DDE00001FB7A9 /* TopicsIndexApiClient.swift */; };
@@ -78,6 +81,9 @@
 		31A80CA8265E3F6E0018BBD4 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
 		31C3C11C264FABA900CCD7A9 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		31C3C120264FBF6500CCD7A9 /* Yuanti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuanti.ttc; sourceTree = "<group>"; };
+		31C5C8B72664E3FA000A1EF2 /* PlayersChooseDealerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersChooseDealerController.swift; sourceTree = "<group>"; };
+		31C5C8BB2664E889000A1EF2 /* QuestionPickAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPickAnimationView.swift; sourceTree = "<group>"; };
+		31C5C8BE2664E8C8000A1EF2 /* QuestionPickAnimationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionPickAnimationView.xib; sourceTree = "<group>"; };
 		31E47E91264FD5910028B545 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		31F046A4265DDD50001FB7A9 /* AbstractApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractApiClient.swift; sourceTree = "<group>"; };
 		31F046A8265DDE00001FB7A9 /* TopicsIndexApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsIndexApiClient.swift; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 				312E8FF32659107C00EE0E2D /* PlayersNavigationController.swift */,
 				3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */,
 				319B4278265E6FF100F39191 /* PlayersEditNameViewController.swift */,
+				31C5C8B72664E3FA000A1EF2 /* PlayersChooseDealerController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -249,6 +256,7 @@
 				312E8FF62659280A00EE0E2D /* DesignableView */,
 				312E8FFB265928E400EE0E2D /* KeyboardSpacerView */,
 				31A80CA3265E3F350018BBD4 /* ActivityIndicatorView */,
+				31C5C8BA2664E868000A1EF2 /* QuestionPickAnimationView */,
 				31322B0526512820008D58C1 /* AssetImageView */,
 				3180C4B3265A615B002ED550 /* InstructionView */,
 				31322B0026511CAD008D58C1 /* BaseButton */,
@@ -265,6 +273,15 @@
 				31C3C11C264FABA900CCD7A9 /* PrimaryButton.swift */,
 			);
 			name = PrimaryButton;
+			sourceTree = "<group>";
+		};
+		31C5C8BA2664E868000A1EF2 /* QuestionPickAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				31C5C8BB2664E889000A1EF2 /* QuestionPickAnimationView.swift */,
+				31C5C8BE2664E8C8000A1EF2 /* QuestionPickAnimationView.xib */,
+			);
+			name = QuestionPickAnimationView;
 			sourceTree = "<group>";
 		};
 		31F046A3265DDD1E001FB7A9 /* ApiClients */ = {
@@ -362,6 +379,7 @@
 				312A96202646A604008C2278 /* Assets.xcassets in Resources */,
 				312A961E2646A603008C2278 /* Main.storyboard in Resources */,
 				3180C4C1265A63B1002ED550 /* InstructionView.xib in Resources */,
+				31C5C8BF2664E8C8000A1EF2 /* QuestionPickAnimationView.xib in Resources */,
 				31A80CA9265E3F6E0018BBD4 /* ActivityIndicatorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +439,7 @@
 				3180C4C4265A8E32002ED550 /* PlayersAddViewController.swift in Sources */,
 				319B4270265E595200F39191 /* QuestionsIndexApiClient.swift in Sources */,
 				319B4273265E59BC00F39191 /* Question.swift in Sources */,
+				31C5C8BC2664E889000A1EF2 /* QuestionPickAnimationView.swift in Sources */,
 				31322B0726512834008D58C1 /* AssetImageView.swift in Sources */,
 				31F046A9265DDE00001FB7A9 /* TopicsIndexApiClient.swift in Sources */,
 				31E47E92264FD5910028B545 /* SecondaryButton.swift in Sources */,
@@ -437,6 +456,7 @@
 				312A96192646A603008C2278 /* SceneDelegate.swift in Sources */,
 				31A80CA1265E3BE70018BBD4 /* NotificationName.swift in Sources */,
 				319B426A265E48D900F39191 /* TopicRegistry.swift in Sources */,
+				31C5C8B82664E3FA000A1EF2 /* PlayersChooseDealerController.swift in Sources */,
 				319B4276265E59DD00F39191 /* QuestionRegistry.swift in Sources */,
 				312E8FF82659281F00EE0E2D /* DesignableView.swift in Sources */,
 			);
@@ -607,7 +627,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = K334V22YZ3;
 				INFOPLIST_FILE = AppCreating1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -630,7 +650,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = K334V22YZ3;
 				INFOPLIST_FILE = AppCreating1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

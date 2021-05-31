@@ -30,11 +30,7 @@ class PlayersEditNameViewController: UIViewController {
     }
 
     @IBAction func submitButtonTouchUpInside(_ sender: UIButton) {
-        let alertController = UIAlertController(title: nil, message: "Under Development", preferredStyle: .alert)
-
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-
-        present(alertController, animated: true, completion: nil)
+        performSegue(withIdentifier: "PlayersChooseDealer", sender: nil)
     }
 
     @objc private func keyboardWillChangeFrame(notification: Notification) {
