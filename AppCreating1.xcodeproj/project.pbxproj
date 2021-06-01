@@ -20,6 +20,10 @@
 		312E8FFD265928FB00EE0E2D /* KeyboardSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312E8FFC265928FB00EE0E2D /* KeyboardSpacerView.swift */; };
 		31322B0226511CC5008D58C1 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31322B0126511CC5008D58C1 /* BaseButton.swift */; };
 		31322B0726512834008D58C1 /* AssetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31322B0626512834008D58C1 /* AssetImageView.swift */; };
+		317F01782665D60C00149380 /* FetchAssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F01772665D60C00149380 /* FetchAssetsView.swift */; };
+		317F017C2665D65100149380 /* FetchAssetsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 317F017B2665D65100149380 /* FetchAssetsView.xib */; };
+		317F017F2665DC7C00149380 /* AssetRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F017E2665DC7C00149380 /* AssetRegistry.swift */; };
+		317F0182266607F300149380 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F0181266607F300149380 /* AudioPlayer.swift */; };
 		3180C4BE265A637D002ED550 /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180C4BD265A637D002ED550 /* InstructionView.swift */; };
 		3180C4C1265A63B1002ED550 /* InstructionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3180C4C0265A63B1002ED550 /* InstructionView.xib */; };
 		3180C4C4265A8E32002ED550 /* PlayersAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */; };
@@ -63,6 +67,10 @@
 		312E8FFC265928FB00EE0E2D /* KeyboardSpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSpacerView.swift; sourceTree = "<group>"; };
 		31322B0126511CC5008D58C1 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		31322B0626512834008D58C1 /* AssetImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImageView.swift; sourceTree = "<group>"; };
+		317F01772665D60C00149380 /* FetchAssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAssetsView.swift; sourceTree = "<group>"; };
+		317F017B2665D65100149380 /* FetchAssetsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchAssetsView.xib; sourceTree = "<group>"; };
+		317F017E2665DC7C00149380 /* AssetRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRegistry.swift; sourceTree = "<group>"; };
+		317F0181266607F300149380 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		3180C4BD265A637D002ED550 /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
 		3180C4C0265A63B1002ED550 /* InstructionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionView.xib; sourceTree = "<group>"; };
 		3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersAddViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +203,15 @@
 			name = AssetImageView;
 			sourceTree = "<group>";
 		};
+		317F01762665D5E700149380 /* FetchAssetsView */ = {
+			isa = PBXGroup;
+			children = (
+				317F01772665D60C00149380 /* FetchAssetsView.swift */,
+				317F017B2665D65100149380 /* FetchAssetsView.xib */,
+			);
+			name = FetchAssetsView;
+			sourceTree = "<group>";
+		};
 		3180C4B3265A615B002ED550 /* InstructionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,9 +225,10 @@
 			isa = PBXGroup;
 			children = (
 				319B4268265E486300F39191 /* Registries */,
+				319B4283265E855A00F39191 /* GameSession.swift */,
+				317F0181266607F300149380 /* AudioPlayer.swift */,
 				319B426C265E4BC500F39191 /* Topic.swift */,
 				319B4272265E59BC00F39191 /* Question.swift */,
-				319B4283265E855A00F39191 /* GameSession.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -220,6 +238,7 @@
 			children = (
 				319B4269265E48D900F39191 /* TopicRegistry.swift */,
 				319B4275265E59DD00F39191 /* QuestionRegistry.swift */,
+				317F017E2665DC7C00149380 /* AssetRegistry.swift */,
 			);
 			name = Registries;
 			sourceTree = "<group>";
@@ -256,6 +275,7 @@
 				312E8FF62659280A00EE0E2D /* DesignableView */,
 				312E8FFB265928E400EE0E2D /* KeyboardSpacerView */,
 				31A80CA3265E3F350018BBD4 /* ActivityIndicatorView */,
+				317F01762665D5E700149380 /* FetchAssetsView */,
 				31C5C8BA2664E868000A1EF2 /* QuestionPickAnimationView */,
 				31322B0526512820008D58C1 /* AssetImageView */,
 				3180C4B3265A615B002ED550 /* InstructionView */,
@@ -372,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C3C121264FBF6500CCD7A9 /* Yuanti.ttc in Resources */,
+				317F017C2665D65100149380 /* FetchAssetsView.xib in Resources */,
 				312A96232646A604008C2278 /* LaunchScreen.storyboard in Resources */,
 				312A96352646A6D1008C2278 /* InfoPlist.strings in Resources */,
 				3180C4C9265A952A002ED550 /* Localizable.strings in Resources */,
@@ -448,6 +469,7 @@
 				312A96172646A603008C2278 /* AppDelegate.swift in Sources */,
 				31C3C11D264FABA900CCD7A9 /* PrimaryButton.swift in Sources */,
 				319B4279265E6FF100F39191 /* PlayersEditNameViewController.swift in Sources */,
+				317F017F2665DC7C00149380 /* AssetRegistry.swift in Sources */,
 				31322B0226511CC5008D58C1 /* BaseButton.swift in Sources */,
 				312E8FFD265928FB00EE0E2D /* KeyboardSpacerView.swift in Sources */,
 				31A80CA5265E3F4C0018BBD4 /* ActivityIndicatorView.swift in Sources */,
@@ -455,7 +477,9 @@
 				3180C4BE265A637D002ED550 /* InstructionView.swift in Sources */,
 				312A96192646A603008C2278 /* SceneDelegate.swift in Sources */,
 				31A80CA1265E3BE70018BBD4 /* NotificationName.swift in Sources */,
+				317F0182266607F300149380 /* AudioPlayer.swift in Sources */,
 				319B426A265E48D900F39191 /* TopicRegistry.swift in Sources */,
+				317F01782665D60C00149380 /* FetchAssetsView.swift in Sources */,
 				31C5C8B82664E3FA000A1EF2 /* PlayersChooseDealerController.swift in Sources */,
 				319B4276265E59DD00F39191 /* QuestionRegistry.swift in Sources */,
 				312E8FF82659281F00EE0E2D /* DesignableView.swift in Sources */,
@@ -627,7 +651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = K334V22YZ3;
 				INFOPLIST_FILE = AppCreating1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -650,7 +674,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = K334V22YZ3;
 				INFOPLIST_FILE = AppCreating1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

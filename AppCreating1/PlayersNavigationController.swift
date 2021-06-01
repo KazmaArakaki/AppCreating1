@@ -13,5 +13,7 @@ class PlayersNavigationController: UINavigationController {
         UIBarButtonItem.appearance().setTitleTextAttributes([
             .font: UIFont(name: "Yuanti SC Bold", size: 16) as Any,
         ], for: .normal)
+
+        AudioPlayer.shared.playBGM()
     }
 }

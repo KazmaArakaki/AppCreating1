@@ -47,7 +47,7 @@ class QuestionPickAnimationView: UIView {
 
         NotificationCenter.default.addObserver(self, selector: #selector(avPlayerItemDidPlayToEndTime(_:)), name: .AVPlayerItemDidPlayToEndTime, object: nil)
 
-        player = AVPlayer(url: URL(string: "https://app-creating-1.arakaki.app/video/Steward_Sample.mp4")!)
+        player = AVPlayer(playerItem: AssetRegistry.shared.questionPickAnimationPlayerItem)
         playerLayer = AVPlayerLayer(player: player)
 
         playerLayer.videoGravity = .resizeAspectFill

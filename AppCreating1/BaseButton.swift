@@ -95,6 +95,8 @@ class BaseButton: UIButton {
             })
         }
 
+        AudioPlayer.shared.playButtonEffect()
+
         super.touchesEnded(touches, with: event)
     }
 
