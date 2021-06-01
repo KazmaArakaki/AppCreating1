@@ -51,7 +51,7 @@ $pageTitle = !empty($this->fetch('pageTitle')) ? implode(' | ', [
             <a href="<?= $this->Url->build([
               'controller' => 'StringUuids',
               'action' => 'index',
-            ]) ?>" class="nav-link <?= ($this->request->getParam('controller') === 'Strings' || $this->request->getParam('controller') === 'LocalizedStrings') ? 'active' : '' ?>">
+            ]) ?>" class="nav-link <?= ($this->request->getParam('controller') === 'StringUuids' || $this->request->getParam('controller') === 'LocalizedStrings') ? 'active' : '' ?>">
               <?= __('テキストローカライズ') ?>
             </a>
           </li>

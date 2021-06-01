@@ -21,6 +21,17 @@ $routes->prefix('Admin', function (RouteBuilder $builder) {
     'action' => 'index',
   ]);
 
+  $builder
+      ->connect('/string-uuids/:stringUuidId/localized-strings/:action/*', [
+        'controller' => 'LocalizedStrings',
+      ])
+      ->setPass([
+        'stringUuidId',
+      ])
+      ->setPatterns([
+        'stringUuidId' => '\d+',
+      ]);
+
   $builder->fallbacks();
 });
 
