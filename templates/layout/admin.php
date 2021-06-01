@@ -22,15 +22,6 @@ $pageTitle = !empty($this->fetch('pageTitle')) ? implode(' | ', [
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
             <a href="<?= $this->Url->build([
-              'controller' => 'Administrators',
-              'action' => 'index',
-            ]) ?>" class="nav-link <?= $this->request->getParam('controller') === 'Administrators' ? 'active' : '' ?>">
-              <?= __('管理者') ?>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="<?= $this->Url->build([
               'controller' => 'Topics',
               'action' => 'index',
             ]) ?>" class="nav-link <?= $this->request->getParam('controller') === 'Topics' ? 'active' : '' ?>">
@@ -53,6 +44,15 @@ $pageTitle = !empty($this->fetch('pageTitle')) ? implode(' | ', [
               'action' => 'index',
             ]) ?>" class="nav-link <?= $this->request->getParam('controller') === 'RequestLogs' ? 'active' : '' ?>">
               <?= __('リクエストログ') ?>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="<?= $this->Url->build([
+              'controller' => 'Administrators',
+              'action' => 'index',
+            ]) ?>" class="nav-link <?= $this->request->getParam('controller') === 'Administrators' ? 'active' : '' ?>">
+              <?= __('管理者') ?>
             </a>
           </li>
         </ul>
