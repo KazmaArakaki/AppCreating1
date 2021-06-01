@@ -40,6 +40,15 @@ $pageTitle = !empty($this->fetch('pageTitle')) ? implode(' | ', [
 
           <li class="nav-item">
             <a href="<?= $this->Url->build([
+              'controller' => 'Languages',
+              'action' => 'index',
+            ]) ?>" class="nav-link <?= $this->request->getParam('controller') === 'Languages' ? 'active' : '' ?>">
+              <?= __('対応言語') ?>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="<?= $this->Url->build([
               'controller' => 'RequestLogs',
               'action' => 'index',
             ]) ?>" class="nav-link <?= $this->request->getParam('controller') === 'RequestLogs' ? 'active' : '' ?>">
