@@ -46,6 +46,15 @@ $pageTitle = !empty($this->fetch('pageTitle')) ? implode(' | ', [
               <?= __('親決め質問') ?>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="<?= $this->Url->build([
+              'controller' => 'RequestLogs',
+              'action' => 'index',
+            ]) ?>" class="nav-link <?= $this->request->getParam('controller') === 'RequestLogs' ? 'active' : '' ?>">
+              <?= __('リクエストログ') ?>
+            </a>
+          </li>
         </ul>
 
         <a href="<?= $this->Url->build([
