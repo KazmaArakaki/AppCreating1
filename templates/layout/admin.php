@@ -49,6 +49,15 @@ $pageTitle = !empty($this->fetch('pageTitle')) ? implode(' | ', [
 
           <li class="nav-item">
             <a href="<?= $this->Url->build([
+              'controller' => 'StringUuids',
+              'action' => 'index',
+            ]) ?>" class="nav-link <?= ($this->request->getParam('controller') === 'Strings' || $this->request->getParam('controller') === 'LocalizedStrings') ? 'active' : '' ?>">
+              <?= __('テキストローカライズ') ?>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="<?= $this->Url->build([
               'controller' => 'RequestLogs',
               'action' => 'index',
             ]) ?>" class="nav-link <?= $this->request->getParam('controller') === 'RequestLogs' ? 'active' : '' ?>">
