@@ -10,6 +10,8 @@ class LocalizedStringsTable extends Table {
     parent::initialize($config);
 
     $this->belongsTo('Languages');
+
+    $this->belongsTo('StringUuids');
   }
 }
 
