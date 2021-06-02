@@ -5,6 +5,12 @@ class GameSession {
 
     var players: [Player] = []
 
+    var playerDealerIndex = 0 {
+        didSet {
+            NotificationCenter.default.post(name: .GameSessionPlayerDealerIndexModified, object: nil)
+        }
+    }
+
     func addPlayer() {
         let player = Player()
 
@@ -23,6 +29,10 @@ class GameSession {
         }
 
         NotificationCenter.default.post(name: .GameSessionPlayerRemoved, object: nil)
+
+        if !players.indices.contains(playerDealerIndex) {
+            playerDealerIndex = players.count - 1
+        }
     }
 
     private init() {

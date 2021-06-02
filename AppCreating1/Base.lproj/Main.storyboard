@@ -27,31 +27,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAq-tJ-NYJ" userLabel="Buttons Container">
-                                <rect key="frame" x="48" y="406" width="279" height="232"/>
+                                <rect key="frame" x="48" y="406" width="279" height="260"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVn-Ry-ODP" userLabel="Start Game Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="279" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="279" height="53"/>
                                         <state key="normal" title="GAME START"/>
                                         <connections>
                                             <action selector="startGameButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SYh-Pb-En5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-wM-5rL" userLabel="Read Instructions Button" customClass="SecondaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="82" width="279" height="34"/>
+                                        <rect key="frame" x="0.0" y="101" width="279" height="37"/>
                                         <state key="normal" title="READ INSTRUCTIONS"/>
                                         <connections>
                                             <action selector="readInstructionsButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hGJ-vj-DON"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ez8-fV-76C" userLabel="Watch Tutorial Button" customClass="SecondaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="140" width="279" height="34"/>
+                                        <rect key="frame" x="0.0" y="162" width="279" height="37"/>
                                         <state key="normal" title="WATCH TUTORIAL"/>
                                         <connections>
                                             <action selector="watchTutorialButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QhP-Fo-q8C"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys2-CP-krr" userLabel="Show Settings Button" customClass="SecondaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="198" width="279" height="34"/>
+                                        <rect key="frame" x="0.0" y="223" width="279" height="37"/>
                                         <state key="normal" title="SHOW SETTINGS"/>
                                         <connections>
                                             <action selector="showSettingsButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zfi-C8-LeB"/>
@@ -111,7 +111,6 @@
         <!--Settings-->
         <scene sceneID="PQ6-TC-oqF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KqM-n3-o6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Ayg-jm-g7s" userLabel="Settings" customClass="SettingsViewController" customModule="AppCreating1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="AlN-xg-Tgo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -183,6 +182,7 @@
                         <outlet property="languageLabel" destination="kQ9-n7-Wys" id="obQ-9a-zuU"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqM-n3-o6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3761" y="87"/>
         </scene>
@@ -270,7 +270,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x9-Va-dqN" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                <rect key="frame" x="24" y="410.66666666666669" width="327" height="30"/>
+                                <rect key="frame" x="24" y="410.66666666666669" width="327" height="53"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="submitButtonTouchUpInside:" destination="jgL-8X-d2R" eventType="touchUpInside" id="b5q-FW-iJt"/>
@@ -338,7 +338,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRy-WT-LGS" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                            <rect key="frame" x="24" y="24" width="327" height="30"/>
+                                            <rect key="frame" x="24" y="24" width="327" height="53"/>
                                             <state key="normal" title="Next"/>
                                             <connections>
                                                 <action selector="submitButtonTouchUpInside:" destination="Zjv-wK-8oI" eventType="touchUpInside" id="Req-0a-Rf6"/>
@@ -394,17 +394,17 @@
                         <outlet property="instructionView" destination="d2r-VL-ccV" id="QFG-bd-43i"/>
                         <outlet property="playerEditNameTable" destination="f3q-fF-L0Y" id="Jkd-lO-YM1"/>
                         <outlet property="submitButton" destination="yRy-WT-LGS" id="Jp0-cD-n6b"/>
-                        <segue destination="hHf-dv-o2i" kind="show" identifier="PlayersChooseDealer" id="Cv2-Dj-Rne"/>
+                        <segue destination="hHf-dv-o2i" kind="show" identifier="PlayersChooseQuestion" id="Cv2-Dj-Rne"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hie-0w-MKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3762" y="867"/>
         </scene>
-        <!--Players Choose Dealer-->
+        <!--Players Choose Question-->
         <scene sceneID="Egb-sF-S1h">
             <objects>
-                <viewController id="hHf-dv-o2i" userLabel="Players Choose Dealer" customClass="PlayersChooseDealerController" customModule="AppCreating1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hHf-dv-o2i" userLabel="Players Choose Question" customClass="PlayersChooseQuestionViewController" customModule="AppCreating1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="toG-3c-eWt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -413,14 +413,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2u-Au-nSs" userLabel="Pick Question Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                <rect key="frame" x="24" y="112" width="327" height="30"/>
+                                <rect key="frame" x="24" y="112" width="327" height="53"/>
                                 <state key="normal" title="Pick Question!"/>
                                 <connections>
                                     <action selector="pickQuestionButtonTouchUpInside:" destination="hHf-dv-o2i" eventType="touchUpInside" id="Yd6-nW-mpM"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oU6-cL-O5z" userLabel="Question Text Container" customClass="DesignableView" customModule="AppCreating1" customModuleProvider="target">
-                                <rect key="frame" x="24" y="112.00000000000001" width="327" height="145.33333333333337"/>
+                                <rect key="frame" x="24" y="112.00000000000001" width="327" height="152.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3S-tw-Sm6" userLabel="Question Text Label">
                                         <rect key="frame" x="123.66666666666666" y="24" width="80" height="23.333333333333329"/>
@@ -435,7 +435,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWs-Du-rcL" userLabel="Repick Question Button" customClass="SecondaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="91.333333333333343" width="279" height="30"/>
+                                        <rect key="frame" x="24" y="91.333333333333343" width="279" height="37"/>
                                         <state key="normal" title="Repick Question!"/>
                                         <connections>
                                             <action selector="repickQuestionButtonTouchUpInside:" destination="hHf-dv-o2i" eventType="touchUpInside" id="1Bv-oT-wHW"/>
@@ -460,6 +460,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyS-gs-6lK" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
+                                <rect key="frame" x="24" y="288.33333333333331" width="327" height="53"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="submitButtonTouchUpInside:" destination="hHf-dv-o2i" eventType="touchUpInside" id="ziH-mI-alc"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah9-sb-33q" customClass="InstructionView" customModule="AppCreating1" customModuleProvider="target">
                                 <rect key="frame" x="16" y="642" width="343" height="120"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -471,6 +478,7 @@
                         <viewLayoutGuide key="safeArea" id="gFl-Pq-Dzc"/>
                         <color key="backgroundColor" name="PaleBlue"/>
                         <constraints>
+                            <constraint firstItem="NyS-gs-6lK" firstAttribute="trailing" secondItem="gFl-Pq-Dzc" secondAttribute="trailing" constant="-24" id="6C8-FD-LsN"/>
                             <constraint firstItem="nC4-2v-r1U" firstAttribute="top" secondItem="toG-3c-eWt" secondAttribute="top" id="7V8-aE-BGV"/>
                             <constraint firstItem="nC4-2v-r1U" firstAttribute="bottom" secondItem="toG-3c-eWt" secondAttribute="bottom" id="A1c-c5-eju"/>
                             <constraint firstItem="ah9-sb-33q" firstAttribute="leading" secondItem="gFl-Pq-Dzc" secondAttribute="leading" constant="16" id="ESx-FK-B8U"/>
@@ -483,10 +491,14 @@
                             <constraint firstItem="ah9-sb-33q" firstAttribute="trailing" secondItem="gFl-Pq-Dzc" secondAttribute="trailing" constant="-16" id="bfP-Mt-uPn"/>
                             <constraint firstItem="Z2u-Au-nSs" firstAttribute="top" secondItem="gFl-Pq-Dzc" secondAttribute="top" constant="24" id="eUR-pI-VdM"/>
                             <constraint firstItem="oU6-cL-O5z" firstAttribute="top" secondItem="gFl-Pq-Dzc" secondAttribute="top" constant="24" id="lx3-2i-fa2"/>
+                            <constraint firstItem="NyS-gs-6lK" firstAttribute="top" secondItem="oU6-cL-O5z" secondAttribute="bottom" constant="24" id="mID-GJ-40M"/>
+                            <constraint firstItem="NyS-gs-6lK" firstAttribute="leading" secondItem="gFl-Pq-Dzc" secondAttribute="leading" constant="24" id="s0r-bT-XLc"/>
                             <constraint firstItem="oU6-cL-O5z" firstAttribute="leading" secondItem="gFl-Pq-Dzc" secondAttribute="leading" constant="24" id="sGL-Qn-PhC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Players Settings" id="7zo-HC-X04"/>
+                    <navigationItem key="navigationItem" title="Players Settings" id="7zo-HC-X04">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="zCI-T9-KHK"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="instructionView" destination="ah9-sb-33q" id="arA-lW-0Q3"/>
                         <outlet property="pickQuestionButton" destination="Z2u-Au-nSs" id="xAS-AQ-3Ei"/>
@@ -494,11 +506,94 @@
                         <outlet property="questionTextContainer" destination="oU6-cL-O5z" id="6qj-nk-hWX"/>
                         <outlet property="questionTextLabel" destination="e3S-tw-Sm6" id="BsC-B5-Ti7"/>
                         <outlet property="repickQuestionButton" destination="NWs-Du-rcL" id="ODO-Sx-Q37"/>
+                        <outlet property="submitButton" destination="NyS-gs-6lK" id="C0Z-XI-gDn"/>
+                        <segue destination="ut2-cj-ggH" kind="show" identifier="PlayersChooseDealer" id="6MO-B2-JTB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Guu-O9-Mzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4602" y="867"/>
+        </scene>
+        <!--Players Choose Dealer-->
+        <scene sceneID="PSE-gy-MNN">
+            <objects>
+                <viewController id="ut2-cj-ggH" userLabel="Players Choose Dealer" customClass="PlayersChooseDealerViewController" customModule="AppCreating1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HTF-PQ-kKM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_0" translatesAutoresizingMaskIntoConstraints="NO" id="wa6-e7-RVe" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e9s-jb-3MS" userLabel="Choose Dealer Table">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ImL-ru-BwU" userLabel="Choose Dealer Table Footer">
+                                    <rect key="frame" x="0.0" y="100" width="375" height="108"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUD-Bq-5br" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
+                                            <rect key="frame" x="164" y="6" width="46" height="30"/>
+                                            <state key="normal" title="Next"/>
+                                            <connections>
+                                                <action selector="submitButtonTouchUpInside:" destination="ut2-cj-ggH" eventType="touchUpInside" id="0Q1-ml-bkU"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="aUD-Bq-5br" firstAttribute="top" secondItem="ImL-ru-BwU" secondAttribute="top" constant="24" id="b7h-oS-X2l"/>
+                                        <constraint firstItem="aUD-Bq-5br" firstAttribute="leading" secondItem="ImL-ru-BwU" secondAttribute="leading" constant="24" id="jCv-IV-wAM"/>
+                                        <constraint firstItem="aUD-Bq-5br" firstAttribute="trailing" secondItem="ImL-ru-BwU" secondAttribute="trailing" constant="-24" id="twc-Qn-w5b"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="grk-5z-DGy">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="grk-5z-DGy" id="cOU-eW-pgn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kza-ut-HNt" customClass="InstructionView" customModule="AppCreating1" customModuleProvider="target">
+                                <rect key="frame" x="16" y="642" width="343" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="YKd-6U-EHX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v6G-Nl-KQt"/>
+                        <color key="backgroundColor" name="PaleBlue"/>
+                        <constraints>
+                            <constraint firstItem="v6G-Nl-KQt" firstAttribute="bottom" secondItem="kza-ut-HNt" secondAttribute="bottom" constant="16" id="1ZM-Sv-Xmi"/>
+                            <constraint firstItem="e9s-jb-3MS" firstAttribute="trailing" secondItem="v6G-Nl-KQt" secondAttribute="trailing" id="6Fv-Z3-NnN"/>
+                            <constraint firstItem="wa6-e7-RVe" firstAttribute="trailing" secondItem="HTF-PQ-kKM" secondAttribute="trailing" id="8xf-PF-40a"/>
+                            <constraint firstItem="kza-ut-HNt" firstAttribute="leading" secondItem="v6G-Nl-KQt" secondAttribute="leading" constant="16" id="Ds2-xU-p4L"/>
+                            <constraint firstItem="e9s-jb-3MS" firstAttribute="leading" secondItem="v6G-Nl-KQt" secondAttribute="leading" id="Odm-Wi-Wfp"/>
+                            <constraint firstItem="v6G-Nl-KQt" firstAttribute="trailing" secondItem="kza-ut-HNt" secondAttribute="trailing" constant="16" id="P1I-BM-dHQ"/>
+                            <constraint firstItem="wa6-e7-RVe" firstAttribute="bottom" secondItem="HTF-PQ-kKM" secondAttribute="bottom" id="QQ3-pP-bjV"/>
+                            <constraint firstItem="wa6-e7-RVe" firstAttribute="top" secondItem="HTF-PQ-kKM" secondAttribute="top" id="Wlc-SJ-EMY"/>
+                            <constraint firstItem="e9s-jb-3MS" firstAttribute="bottom" secondItem="HTF-PQ-kKM" secondAttribute="bottom" id="Xl0-Uw-j15"/>
+                            <constraint firstItem="wa6-e7-RVe" firstAttribute="leading" secondItem="HTF-PQ-kKM" secondAttribute="leading" id="g7M-CP-roR"/>
+                            <constraint firstItem="e9s-jb-3MS" firstAttribute="top" secondItem="v6G-Nl-KQt" secondAttribute="top" id="nLS-Kb-5Zx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Players Settings" id="SOV-pI-cZD">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Jpt-Ei-RdJ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chooseDealerTable" destination="e9s-jb-3MS" id="tVK-cY-Zma"/>
+                        <outlet property="instructionView" destination="kza-ut-HNt" id="4JJ-nM-cTF"/>
+                        <outlet property="submitButton" destination="aUD-Bq-5br" id="MSU-Ta-HiP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s3O-FC-ZsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5422" y="867"/>
         </scene>
         <!--Root-->
         <scene sceneID="snG-Ao-BK4">
@@ -604,28 +699,37 @@
     </scenes>
     <designables>
         <designable name="4Pf-wM-5rL">
-            <size key="intrinsicContentSize" width="179" height="34"/>
+            <size key="intrinsicContentSize" width="201" height="37"/>
         </designable>
         <designable name="6x9-Va-dqN">
-            <size key="intrinsicContentSize" width="32" height="30"/>
+            <size key="intrinsicContentSize" width="68" height="53"/>
+        </designable>
+        <designable name="DkV-FP-Raj">
+            <size key="intrinsicContentSize" width="20" height="20"/>
         </designable>
         <designable name="Ez8-fV-76C">
-            <size key="intrinsicContentSize" width="151" height="34"/>
+            <size key="intrinsicContentSize" width="175" height="37"/>
         </designable>
         <designable name="NWs-Du-rcL">
-            <size key="intrinsicContentSize" width="117" height="30"/>
+            <size key="intrinsicContentSize" width="161" height="37"/>
+        </designable>
+        <designable name="NyS-gs-6lK">
+            <size key="intrinsicContentSize" width="68" height="53"/>
         </designable>
         <designable name="Ys2-CP-krr">
-            <size key="intrinsicContentSize" width="143" height="34"/>
+            <size key="intrinsicContentSize" width="167" height="37"/>
         </designable>
         <designable name="Z2u-Au-nSs">
-            <size key="intrinsicContentSize" width="99" height="30"/>
+            <size key="intrinsicContentSize" width="142" height="53"/>
+        </designable>
+        <designable name="aUD-Bq-5br">
+            <size key="intrinsicContentSize" width="68" height="53"/>
         </designable>
         <designable name="jVn-Ry-ODP">
-            <size key="intrinsicContentSize" width="109" height="34"/>
+            <size key="intrinsicContentSize" width="135" height="53"/>
         </designable>
         <designable name="yRy-WT-LGS">
-            <size key="intrinsicContentSize" width="32" height="30"/>
+            <size key="intrinsicContentSize" width="68" height="53"/>
         </designable>
     </designables>
     <resources>

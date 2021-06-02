@@ -57,7 +57,7 @@ class PlayersEditNameViewController: UIViewController {
             }
         }
 
-        performSegue(withIdentifier: "PlayersChooseDealer", sender: nil)
+        performSegue(withIdentifier: "PlayersChooseQuestion", sender: nil)
     }
 
     @objc private func keyboardWillChangeFrame(notification: Notification) {
