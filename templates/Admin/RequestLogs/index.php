@@ -1,4 +1,22 @@
-<div class="table-responsive">
+<?php $this->start('pagination'); ?>
+<nav class="d-flex justify-content-end my-4">
+  <ul class="pagination">
+    <?= $this->Paginator->prev('<') ?>
+
+    <?= $this->Paginator->numbers([
+      'first' => 1,
+      'modulus' => 2,
+      'last' => 1,
+    ]) ?>
+
+    <?= $this->Paginator->next('>') ?>
+  </ul>
+</nav>
+<?php $this->end(); ?>
+
+<?= $this->fetch('pagination') ?>
+
+<div class="table-responsive my-4">
   <table class="table table-bordered table-striped table-hover table-sm">
     <thead>
       <tr>
@@ -39,38 +57,38 @@
     <tbody>
       <?php foreach ($requestLogs as $requestLog): ?>
       <tr>
-        <td>
+        <td class="text-nowrap">
           <?= $requestLog['created']->i18nFormat('yyyy/MM/dd HH:mm', 'Asia/Tokyo') ?>
         </td>
 
-        <td>
+        <td class="text-nowrap">
           <?= h($requestLog['request_path']) ?>
         </td>
 
-        <td>
+        <td class="text-nowrap">
           <?= sprintf('Length: %d', mb_strlen($requestLog['request_query'])) ?>
         </td>
 
-        <td>
+        <td class="text-nowrap">
           <?= sprintf('Length: %d', mb_strlen($requestLog['request_data'])) ?>
         </td>
 
-        <td>
+        <td class="text-nowrap">
           <?= vsprintf('%s (%s)', [
             h($requestLog['name']),
             h($requestLog['os']),
           ]) ?>
         </td>
 
-        <td>
+        <td class="text-nowrap">
           <?= h($requestLog['app_version']) ?>
         </td>
 
-        <td>
+        <td class="text-nowrap">
           <?= h($requestLog['timezone']) ?>
         </td>
 
-        <td>
+        <td class="text-nowrap">
           <?= h($requestLog['ip']) ?>
         </td>
       </tr>
@@ -78,4 +96,6 @@
     </tbody>
   </table>
 </div>
+
+<?= $this->fetch('pagination') ?>
 

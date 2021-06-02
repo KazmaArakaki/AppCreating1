@@ -12,11 +12,14 @@ class RequestLogsController extends AdminController {
   }
 
   public function index() {
-    $requestLogs = $this->RequestLogs->find()
-        ->order([
-          'RequestLogs.created' => 'desc',
-        ])
-        ->toList();
+    $requestLogsQuery = $this->RequestLogs->find();
+
+    $requestLogs = $this->paginate($requestLogsQuery, [
+      'limit' => 300,
+      'order' => [
+        'RequestLogs.id' => 'desc',
+      ],
+    ]);
 
     $this->set(compact([
       'requestLogs',
