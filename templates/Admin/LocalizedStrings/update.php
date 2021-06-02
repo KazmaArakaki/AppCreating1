@@ -1,7 +1,12 @@
 <div class="card mb-4">
   <div class="card-body">
     <h5 class="card-title">
-      <?= h($stringUuid['uuid']) ?>
+      <a href="<?= $this->Url->build([
+        'action' => 'index',
+        'stringUuidId' => $stringUuid['id'],
+      ]) ?>">
+        <?= h($stringUuid['uuid']) ?>
+      </a>
     </h5>
 
     <p class="card-text">

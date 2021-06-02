@@ -6,6 +6,23 @@ $languageOptions = $languageCollection
     ->combine('id', 'name');
 ?>
 
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">
+      <a href="<?= $this->Url->build([
+        'action' => 'index',
+        'stringUuidId' => $stringUuid['id'],
+      ]) ?>">
+        <?= h($stringUuid['uuid']) ?>
+      </a>
+    </h5>
+
+    <p class="card-text">
+      <?= nl2br(h($stringUuid['description'])) ?>
+    </p>
+  </div>
+</div>
+
 <?= $this->Form->create($localizedString, ['novalidate' => true]) ?>
   <div class="mb-3">
     <label class="form-label">
