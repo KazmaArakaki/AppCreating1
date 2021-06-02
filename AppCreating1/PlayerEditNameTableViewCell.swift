@@ -13,6 +13,7 @@ extension PlayerEditNameTableViewCellDelegate {
 class PlayerEditNameTableViewCell: UITableViewCell {
     var delegate: PlayerEditNameTableViewCellDelegate?
 
+    var playerNameFieldLabelStringFormat: String = ""
     var playerIndex: Int = 0
 
     @IBOutlet weak var playerNameFieldLabel: UILabel!
@@ -26,8 +27,6 @@ class PlayerEditNameTableViewCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-
-        let playerNameFieldLabelStringFormat = NSLocalizedString("Player %d Name", comment: "[PlayerEditNameTableViewCell::layoutSubviews] player name field label")
 
         playerNameFieldLabel.text = String(format: playerNameFieldLabelStringFormat, playerIndex + 1)
     }

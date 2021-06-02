@@ -10,11 +10,18 @@ class AbstractApiClient: NSObject {
 
     var path = "/"
 
+    var queryItems: [URLQueryItem] = []
+
     var url: URL {
         get {
-            let host = "app-creating-1.arakaki.app/api"
+            var urlComponents = URLComponents()
 
-            return URL(string: "https://\(host)\(path)")!
+            urlComponents.scheme = "https"
+            urlComponents.host = "app-creating-1.arakaki.app"
+            urlComponents.path = "/api" + path
+            urlComponents.queryItems = queryItems
+
+            return urlComponents.url!
         }
     }
 
@@ -32,6 +39,7 @@ class AbstractApiClient: NSObject {
         dataTask?.cancel()
 
         request = nil
+        queryItems = []
         boundary = ""
         payload = Data()
         dataTask = nil

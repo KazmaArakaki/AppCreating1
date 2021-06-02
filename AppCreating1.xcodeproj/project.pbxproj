@@ -24,10 +24,20 @@
 		317F017C2665D65100149380 /* FetchAssetsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 317F017B2665D65100149380 /* FetchAssetsView.xib */; };
 		317F017F2665DC7C00149380 /* AssetRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F017E2665DC7C00149380 /* AssetRegistry.swift */; };
 		317F0182266607F300149380 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F0181266607F300149380 /* AudioPlayer.swift */; };
+		317F01872666594200149380 /* LocalizedStringRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F01862666594200149380 /* LocalizedStringRegistry.swift */; };
+		317F018A266659B100149380 /* LocalizedStringsIndexApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F0189266659B100149380 /* LocalizedStringsIndexApiClient.swift */; };
+		317F018D2667011000149380 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F018C2667011000149380 /* RootViewController.swift */; };
+		317F019726672BCE00149380 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F019626672BCE00149380 /* SettingsViewController.swift */; };
+		317F019B2667354900149380 /* SettingsLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F019A2667354900149380 /* SettingsLanguageViewController.swift */; };
+		317F019F2667373300149380 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F019E2667373300149380 /* Language.swift */; };
+		317F01A22667379400149380 /* LanguageRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F01A12667379400149380 /* LanguageRegistry.swift */; };
+		317F01A5266737C400149380 /* LanguagesIndexApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F01A4266737C400149380 /* LanguagesIndexApiClient.swift */; };
+		317F01AA26673A3C00149380 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F01A826673A3C00149380 /* LanguageTableViewCell.swift */; };
+		317F01AB26673A3C00149380 /* LanguageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 317F01A926673A3C00149380 /* LanguageTableViewCell.xib */; };
+		317F01AF26673DEB00149380 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F01AE26673DEB00149380 /* UserSession.swift */; };
 		3180C4BE265A637D002ED550 /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180C4BD265A637D002ED550 /* InstructionView.swift */; };
 		3180C4C1265A63B1002ED550 /* InstructionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3180C4C0265A63B1002ED550 /* InstructionView.xib */; };
 		3180C4C4265A8E32002ED550 /* PlayersAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */; };
-		3180C4C9265A952A002ED550 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3180C4CB265A952A002ED550 /* Localizable.strings */; };
 		319B426A265E48D900F39191 /* TopicRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B4269265E48D900F39191 /* TopicRegistry.swift */; };
 		319B426D265E4BC500F39191 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B426C265E4BC500F39191 /* Topic.swift */; };
 		319B4270265E595200F39191 /* QuestionsIndexApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B426F265E595200F39191 /* QuestionsIndexApiClient.swift */; };
@@ -59,8 +69,6 @@
 		312A961F2646A604008C2278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		312A96222646A604008C2278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		312A96242646A604008C2278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		312A96322646A6C5008C2278 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		312A96332646A6C5008C2278 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		312A96392646A6D4008C2278 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		312E8FF32659107C00EE0E2D /* PlayersNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersNavigationController.swift; sourceTree = "<group>"; };
 		312E8FF72659281F00EE0E2D /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -71,10 +79,20 @@
 		317F017B2665D65100149380 /* FetchAssetsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchAssetsView.xib; sourceTree = "<group>"; };
 		317F017E2665DC7C00149380 /* AssetRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRegistry.swift; sourceTree = "<group>"; };
 		317F0181266607F300149380 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		317F01862666594200149380 /* LocalizedStringRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringRegistry.swift; sourceTree = "<group>"; };
+		317F0189266659B100149380 /* LocalizedStringsIndexApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringsIndexApiClient.swift; sourceTree = "<group>"; };
+		317F018C2667011000149380 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		317F019626672BCE00149380 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		317F019A2667354900149380 /* SettingsLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLanguageViewController.swift; sourceTree = "<group>"; };
+		317F019E2667373300149380 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		317F01A12667379400149380 /* LanguageRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRegistry.swift; sourceTree = "<group>"; };
+		317F01A4266737C400149380 /* LanguagesIndexApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesIndexApiClient.swift; sourceTree = "<group>"; };
+		317F01A826673A3C00149380 /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
+		317F01A926673A3C00149380 /* LanguageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageTableViewCell.xib; sourceTree = "<group>"; };
+		317F01AE26673DEB00149380 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		3180C4BD265A637D002ED550 /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
 		3180C4C0265A63B1002ED550 /* InstructionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionView.xib; sourceTree = "<group>"; };
 		3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersAddViewController.swift; sourceTree = "<group>"; };
-		3180C4CA265A952A002ED550 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		319B4269265E48D900F39191 /* TopicRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicRegistry.swift; sourceTree = "<group>"; };
 		319B426C265E4BC500F39191 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		319B426F265E595200F39191 /* QuestionsIndexApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsIndexApiClient.swift; sourceTree = "<group>"; };
@@ -137,7 +155,6 @@
 				312A96182646A603008C2278 /* SceneDelegate.swift */,
 				312A96242646A604008C2278 /* Info.plist */,
 				312A96372646A6D1008C2278 /* InfoPlist.strings */,
-				3180C4CB265A952A002ED550 /* Localizable.strings */,
 				319B4267265E485400F39191 /* Models */,
 				31F046A3265DDD1E001FB7A9 /* ApiClients */,
 				312A962C2646A637008C2278 /* Controllers */,
@@ -154,7 +171,10 @@
 		312A962C2646A637008C2278 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				317F018C2667011000149380 /* RootViewController.swift */,
 				312A961A2646A603008C2278 /* MainMenuViewController.swift */,
+				317F019626672BCE00149380 /* SettingsViewController.swift */,
+				317F019A2667354900149380 /* SettingsLanguageViewController.swift */,
 				312E8FF32659107C00EE0E2D /* PlayersNavigationController.swift */,
 				3180C4C3265A8E32002ED550 /* PlayersAddViewController.swift */,
 				319B4278265E6FF100F39191 /* PlayersEditNameViewController.swift */,
@@ -212,6 +232,15 @@
 			name = FetchAssetsView;
 			sourceTree = "<group>";
 		};
+		317F01A726673A1400149380 /* LanguageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				317F01A826673A3C00149380 /* LanguageTableViewCell.swift */,
+				317F01A926673A3C00149380 /* LanguageTableViewCell.xib */,
+			);
+			name = LanguageTableViewCell;
+			sourceTree = "<group>";
+		};
 		3180C4B3265A615B002ED550 /* InstructionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,10 +254,12 @@
 			isa = PBXGroup;
 			children = (
 				319B4268265E486300F39191 /* Registries */,
+				317F01AE26673DEB00149380 /* UserSession.swift */,
 				319B4283265E855A00F39191 /* GameSession.swift */,
 				317F0181266607F300149380 /* AudioPlayer.swift */,
 				319B426C265E4BC500F39191 /* Topic.swift */,
 				319B4272265E59BC00F39191 /* Question.swift */,
+				317F019E2667373300149380 /* Language.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -238,7 +269,9 @@
 			children = (
 				319B4269265E48D900F39191 /* TopicRegistry.swift */,
 				319B4275265E59DD00F39191 /* QuestionRegistry.swift */,
+				317F01A12667379400149380 /* LanguageRegistry.swift */,
 				317F017E2665DC7C00149380 /* AssetRegistry.swift */,
+				317F01862666594200149380 /* LocalizedStringRegistry.swift */,
 			);
 			name = Registries;
 			sourceTree = "<group>";
@@ -282,6 +315,7 @@
 				31322B0026511CAD008D58C1 /* BaseButton */,
 				31C3C11B264FAB9A00CCD7A9 /* PrimaryButton */,
 				31AD655626510F2700EE0202 /* SecondaryButton */,
+				317F01A726673A1400149380 /* LanguageTableViewCell */,
 				319B427B265E70FE00F39191 /* PlayerEditNameTableViewCell */,
 			);
 			name = CustomViews;
@@ -310,6 +344,8 @@
 				31F046A4265DDD50001FB7A9 /* AbstractApiClient.swift */,
 				31F046A8265DDE00001FB7A9 /* TopicsIndexApiClient.swift */,
 				319B426F265E595200F39191 /* QuestionsIndexApiClient.swift */,
+				317F01A4266737C400149380 /* LanguagesIndexApiClient.swift */,
+				317F0189266659B100149380 /* LocalizedStringsIndexApiClient.swift */,
 			);
 			name = ApiClients;
 			sourceTree = "<group>";
@@ -395,11 +431,11 @@
 				317F017C2665D65100149380 /* FetchAssetsView.xib in Resources */,
 				312A96232646A604008C2278 /* LaunchScreen.storyboard in Resources */,
 				312A96352646A6D1008C2278 /* InfoPlist.strings in Resources */,
-				3180C4C9265A952A002ED550 /* Localizable.strings in Resources */,
 				319B427F265E715D00F39191 /* PlayerEditNameTableViewCell.xib in Resources */,
 				312A96202646A604008C2278 /* Assets.xcassets in Resources */,
 				312A961E2646A603008C2278 /* Main.storyboard in Resources */,
 				3180C4C1265A63B1002ED550 /* InstructionView.xib in Resources */,
+				317F01AB26673A3C00149380 /* LanguageTableViewCell.xib in Resources */,
 				31C5C8BF2664E8C8000A1EF2 /* QuestionPickAnimationView.xib in Resources */,
 				31A80CA9265E3F6E0018BBD4 /* ActivityIndicatorView.xib in Resources */,
 			);
@@ -456,6 +492,7 @@
 			files = (
 				31F046A5265DDD50001FB7A9 /* AbstractApiClient.swift in Sources */,
 				319B426D265E4BC500F39191 /* Topic.swift in Sources */,
+				317F019726672BCE00149380 /* SettingsViewController.swift in Sources */,
 				312E8FF42659107C00EE0E2D /* PlayersNavigationController.swift in Sources */,
 				3180C4C4265A8E32002ED550 /* PlayersAddViewController.swift in Sources */,
 				319B4270265E595200F39191 /* QuestionsIndexApiClient.swift in Sources */,
@@ -467,20 +504,29 @@
 				312A961B2646A603008C2278 /* MainMenuViewController.swift in Sources */,
 				319B4284265E855A00F39191 /* GameSession.swift in Sources */,
 				312A96172646A603008C2278 /* AppDelegate.swift in Sources */,
+				317F01A22667379400149380 /* LanguageRegistry.swift in Sources */,
+				317F01AA26673A3C00149380 /* LanguageTableViewCell.swift in Sources */,
+				317F01872666594200149380 /* LocalizedStringRegistry.swift in Sources */,
 				31C3C11D264FABA900CCD7A9 /* PrimaryButton.swift in Sources */,
 				319B4279265E6FF100F39191 /* PlayersEditNameViewController.swift in Sources */,
+				317F01A5266737C400149380 /* LanguagesIndexApiClient.swift in Sources */,
 				317F017F2665DC7C00149380 /* AssetRegistry.swift in Sources */,
 				31322B0226511CC5008D58C1 /* BaseButton.swift in Sources */,
 				312E8FFD265928FB00EE0E2D /* KeyboardSpacerView.swift in Sources */,
 				31A80CA5265E3F4C0018BBD4 /* ActivityIndicatorView.swift in Sources */,
+				317F01AF26673DEB00149380 /* UserSession.swift in Sources */,
 				319B427E265E715D00F39191 /* PlayerEditNameTableViewCell.swift in Sources */,
 				3180C4BE265A637D002ED550 /* InstructionView.swift in Sources */,
+				317F018D2667011000149380 /* RootViewController.swift in Sources */,
 				312A96192646A603008C2278 /* SceneDelegate.swift in Sources */,
 				31A80CA1265E3BE70018BBD4 /* NotificationName.swift in Sources */,
+				317F018A266659B100149380 /* LocalizedStringsIndexApiClient.swift in Sources */,
 				317F0182266607F300149380 /* AudioPlayer.swift in Sources */,
 				319B426A265E48D900F39191 /* TopicRegistry.swift in Sources */,
 				317F01782665D60C00149380 /* FetchAssetsView.swift in Sources */,
 				31C5C8B82664E3FA000A1EF2 /* PlayersChooseDealerController.swift in Sources */,
+				317F019F2667373300149380 /* Language.swift in Sources */,
+				317F019B2667354900149380 /* SettingsLanguageViewController.swift in Sources */,
 				319B4276265E59DD00F39191 /* QuestionRegistry.swift in Sources */,
 				312E8FF82659281F00EE0E2D /* DesignableView.swift in Sources */,
 			);
@@ -493,7 +539,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				312A961D2646A603008C2278 /* Base */,
-				312A96322646A6C5008C2278 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -502,7 +547,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				312A96222646A604008C2278 /* Base */,
-				312A96332646A6C5008C2278 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -513,14 +557,6 @@
 				312A96392646A6D4008C2278 /* ja */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		3180C4CB265A952A002ED550 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3180C4CA265A952A002ED550 /* ja */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -651,7 +687,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = K334V22YZ3;
 				INFOPLIST_FILE = AppCreating1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -674,7 +710,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = K334V22YZ3;
 				INFOPLIST_FILE = AppCreating1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

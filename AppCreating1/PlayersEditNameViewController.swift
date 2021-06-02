@@ -2,10 +2,26 @@ import UIKit
 
 class PlayersEditNameViewController: UIViewController {
     @IBOutlet weak var playerEditNameTable: UITableView!
+    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var instructionView: InstructionView!
+
+    private var localizedStrings: [String: String]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        localizedStrings = LocalizedStringRegistry.shared.read(uuids: [
+            "866dc473-0567-41de-86c6-972134b67c7c",
+            "207a5170-11e3-4828-bb15-b06807bfbd47",
+            "6237b5fa-5c25-452e-b795-e77ff9a448ed",
+            "3cae4b29-756b-482b-be07-936e62220d1e",
+        ])
+
+        navigationItem.backBarButtonItem = UIBarButtonItem()
+
+        title = localizedStrings["866dc473-0567-41de-86c6-972134b67c7c"]
+
+        submitButton.setTitle(localizedStrings["6237b5fa-5c25-452e-b795-e77ff9a448ed"], for: .normal)
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
 
@@ -25,7 +41,7 @@ class PlayersEditNameViewController: UIViewController {
         }
 
         instructionView.setInstructions([
-            InstructionView.Instruction(image: UIImage(named: "King"), message: NSLocalizedString("Well, well, you can tell me your name now!", comment: "[PlayersEditNameViewController::viewDidLoad] instruction")),
+            InstructionView.Instruction(image: UIImage(named: "King"), message: localizedStrings["3cae4b29-756b-482b-be07-936e62220d1e"] ?? "..."),
         ])
     }
 
@@ -78,6 +94,7 @@ extension PlayersEditNameViewController: UITableViewDataSource {
         let cell = playerEditNameTable.dequeueReusableCell(withIdentifier: "PlayerEditNameTableViewCell") as! PlayerEditNameTableViewCell
 
         cell.delegate = self
+        cell.playerNameFieldLabelStringFormat = localizedStrings["207a5170-11e3-4828-bb15-b06807bfbd47"] ?? ""
         cell.playerIndex = indexPath.row
 
         if GameSession.current.players.indices.contains(indexPath.row) {

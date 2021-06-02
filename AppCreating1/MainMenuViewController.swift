@@ -1,33 +1,38 @@
 import UIKit
 
 class MainMenuViewController: UIViewController {
-    private var fetchAssetsView: FetchAssetsView?
+    @IBOutlet weak var startGameButton: UIButton!
+    @IBOutlet weak var readInstructionsButton: UIButton!
+    @IBOutlet weak var watchTutorialButton: UIButton!
+    @IBOutlet weak var showSettingsButton: UIButton!
 
-    private var fetchProgress: Float = 0
-
-    private var isTopicsFetched = false
-    private var isQuestionsFetched = false
-    private var isBackgroundAudioDataFetched = false
-    private var isButtonEffectAudioDataFetched = false
-    private var isQuestionPickAnimationPlayerItemFetched = false
+    private var localizedStrings: [String: String]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        localizedStrings = LocalizedStringRegistry.shared.read(uuids: [
+            "103cef56-8797-496f-9d32-5640cc94e750",
+            "fc5fb666-d195-4d3f-bcef-a5ae98afd53d",
+            "683fdbcb-d546-4964-baa3-c78184682ddf",
+            "67c94249-d182-4b83-bf57-bff7b7f5e1eb",
+        ])
+
+        navigationItem.backBarButtonItem = UIBarButtonItem()
+
+        startGameButton.setTitle(localizedStrings["103cef56-8797-496f-9d32-5640cc94e750"], for: .normal)
+
+        readInstructionsButton.setTitle(localizedStrings["fc5fb666-d195-4d3f-bcef-a5ae98afd53d"], for: .normal)
+
+        watchTutorialButton.setTitle(localizedStrings["683fdbcb-d546-4964-baa3-c78184682ddf"], for: .normal)
+
+        showSettingsButton.setTitle(localizedStrings["67c94249-d182-4b83-bf57-bff7b7f5e1eb"], for: .normal)
     }
 
     @IBAction func startGameButtonTouchUpInside(_ sender: UIButton) {
-        fetchAssetsView = FetchAssetsView()
-        fetchProgress = 0
-
-        fetchAssetsView?.setProgress(fetchProgress)
-
-        fetchAssetsView?.setInstructions([
-            InstructionView.Instruction(image: UIImage(named: "Steward"), message: NSLocalizedString("We are downloading game data.", comment: "[MainMenuViewController::startGameButtonTouchUpInside] instruction"))
-        ])
-
-        view.addSubview(fetchAssetsView!)
-
-        fetchAssets()
+        if let playersNavigationViewController = storyboard?.instantiateViewController(withIdentifier: "PlayersNavigation") {
+            UIApplication.shared.windows.first?.rootViewController = playersNavigationViewController
+        }
     }
 
     @IBAction func readInstructionsButtonTouchUpInside(_ sender: UIButton) {
@@ -44,158 +49,7 @@ class MainMenuViewController: UIViewController {
         }
     }
 
-    private func fetchAssets() {
-        let stepCount = Float(5)
-
-        if !isTopicsFetched {
-            TopicRegistry.shared.fetch(callback: { (success) in
-                guard success else {
-                    DispatchQueue.main.async {
-                        let title = NSLocalizedString("Error", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
-                        let message = NSLocalizedString("Failed to fetch data from server", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
-
-                        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-                        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-
-                        self.present(alertController, animated: true, completion: nil)
-
-                        self.fetchAssetsView?.removeFromSuperview()
-                    }
-
-                    return
-                }
-
-                self.isTopicsFetched = true
-
-                DispatchQueue.main.async {
-                    self.fetchProgress += 1 / stepCount
-
-                    self.fetchAssetsView?.setProgress(self.fetchProgress)
-
-                    self.fetchAssets()
-                }
-            })
-
-            return
-        }
-
-        if !isQuestionsFetched {
-            QuestionRegistry.shared.fetch(callback: { (success) in
-                guard success else {
-                    DispatchQueue.main.async {
-                        let title = NSLocalizedString("Error", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
-                        let message = NSLocalizedString("Failed to fetch data from server", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
-
-                        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-                        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-
-                        self.present(alertController, animated: true, completion: nil)
-
-                        self.fetchAssetsView?.removeFromSuperview()
-                    }
-
-                    return
-                }
-
-                self.isQuestionsFetched = true
-
-                DispatchQueue.main.async {
-                    self.fetchProgress += 1 / stepCount
-
-                    self.fetchAssetsView?.setProgress(self.fetchProgress)
-
-                    self.fetchAssets()
-                }
-            })
-
-            return
-        }
-
-        if !isBackgroundAudioDataFetched {
-            if AssetRegistry.shared.backgroundAudioData == nil {
-                DispatchQueue.main.async {
-                    let title = NSLocalizedString("Error", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
-                    let message = NSLocalizedString("Failed to fetch data from server", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
-
-                    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-
-                    self.present(alertController, animated: true, completion: nil)
-
-                    self.fetchAssetsView?.removeFromSuperview()
-                }
-
-                return
-            } else {
-                isBackgroundAudioDataFetched = true
-
-                fetchProgress += 1 / stepCount
-
-                fetchAssetsView?.setProgress(self.fetchProgress)
-
-                fetchAssets()
-            }
-        }
-
-        if !isButtonEffectAudioDataFetched {
-            if AssetRegistry.shared.buttonEffectAudioData == nil {
-                DispatchQueue.main.async {
-                    let title = NSLocalizedString("Error", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
-                    let message = NSLocalizedString("Failed to fetch data from server", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
-
-                    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-
-                    self.present(alertController, animated: true, completion: nil)
-
-                    self.fetchAssetsView?.removeFromSuperview()
-                }
-
-                return
-            } else {
-                isButtonEffectAudioDataFetched = true
-
-                fetchProgress += 1 / stepCount
-
-                fetchAssetsView?.setProgress(self.fetchProgress)
-
-                fetchAssets()
-            }
-        }
-
-        if !isQuestionPickAnimationPlayerItemFetched {
-            if AssetRegistry.shared.questionPickAnimationPlayerItem == nil {
-                DispatchQueue.main.async {
-                    let title = NSLocalizedString("Error", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
-                    let message = NSLocalizedString("Failed to fetch data from server", comment: "[MainMenuViewController::startGameButtonTouchUpInside] alert")
-
-                    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-
-                    self.present(alertController, animated: true, completion: nil)
-
-                    self.fetchAssetsView?.removeFromSuperview()
-                }
-
-                return
-            } else {
-                isQuestionPickAnimationPlayerItemFetched = true
-
-                fetchProgress += 1 / stepCount
-
-                fetchAssetsView?.setProgress(self.fetchProgress)
-
-                fetchAssets()
-            }
-        }
-
-        if let playersNavigationViewController = storyboard?.instantiateViewController(withIdentifier: "PlayersNavigation") {
-            UIApplication.shared.windows.first?.rootViewController = playersNavigationViewController
-        }
+    @IBAction func showSettingsButtonTouchUpInside(_ sender: UIButton) {
+        performSegue(withIdentifier: "Settings", sender: nil)
     }
 }

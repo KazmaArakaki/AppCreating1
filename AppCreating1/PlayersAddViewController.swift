@@ -1,13 +1,36 @@
 import UIKit
 
 class PlayersAddViewController: UIViewController {
+    @IBOutlet weak var playerCountFieldLabel1: UILabel!
     @IBOutlet weak var playerCountPicker: UIPickerView!
+    @IBOutlet weak var playerCountFieldLabel2: UILabel!
+    @IBOutlet weak var submitButton: PrimaryButton!
     @IBOutlet weak var instructionView: InstructionView!
 
+    private var localizedStrings: [String: String]!
     private var playerCountPickerOptions = [Int](2...100)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        localizedStrings = LocalizedStringRegistry.shared.read(uuids: [
+            "46d1df16-64ba-491e-9d53-7ee06778285c",
+            "54e41629-ec57-4a50-9ef7-5c61dac0f8aa",
+            "31b1e428-468a-49f3-9ea4-d1552caa38aa",
+            "a7d37ccc-641a-44da-a68a-edca1e2a0001",
+            "a192bfc8-c9fe-450a-9a92-09d243e9b054",
+            "2610dd9d-ec2a-4202-be66-be8b4faf0dd8",
+        ])
+
+        navigationItem.backBarButtonItem = UIBarButtonItem()
+
+        title = localizedStrings["46d1df16-64ba-491e-9d53-7ee06778285c"]
+
+        playerCountFieldLabel1.text = localizedStrings["54e41629-ec57-4a50-9ef7-5c61dac0f8aa"]
+
+        playerCountFieldLabel2.text = localizedStrings["31b1e428-468a-49f3-9ea4-d1552caa38aa"]
+
+        submitButton.setTitle(localizedStrings["a7d37ccc-641a-44da-a68a-edca1e2a0001"], for: .normal)
 
         NotificationCenter.default.addObserver(self, selector: #selector(gameSessionPlayerAdded(_:)), name: .GameSessionPlayerAdded, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gameSessionPlayerRemoved(_:)), name: .GameSessionPlayerRemoved, object: nil)
@@ -16,8 +39,8 @@ class PlayersAddViewController: UIViewController {
         playerCountPicker.dataSource = self
 
         instructionView.setInstructions([
-            InstructionView.Instruction(image: UIImage(named: "King"), message: NSLocalizedString("Now, let's get the party started!", comment: "[PlayersAddViewController::viewDidLoad] instruction")),
-            InstructionView.Instruction(image: UIImage(named: "Steward"), message: NSLocalizedString("First of all, could you tell me how many players are there?", comment: "[PlayersAddViewController::viewDidLoad] instruction")),
+            InstructionView.Instruction(image: UIImage(named: "King"), message: localizedStrings["a192bfc8-c9fe-450a-9a92-09d243e9b054"] ?? "..."),
+            InstructionView.Instruction(image: UIImage(named: "Steward"), message: localizedStrings["2610dd9d-ec2a-4202-be66-be8b4faf0dd8"] ?? "..."),
         ])
 
         GameSession.current.addPlayer()

@@ -9,10 +9,30 @@ class PlayersChooseDealerController: UIViewController {
     @IBOutlet weak var repickQuestionButton: UIButton!
     @IBOutlet weak var instructionView: InstructionView!
 
+    private var localizedStrings: [String: String]!
     private var questionPickAnimationView: QuestionPickAnimationView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        localizedStrings = LocalizedStringRegistry.shared.read(uuids: [
+            "dae2ddeb-c10d-4806-8fbd-155cdab62794",
+            "4ad531d7-0d94-469a-a41b-3dbb83d58089",
+            "fb07ce03-17ae-4ba7-8981-c03f3f16842b",
+            "ef50397d-c364-4089-a7f1-ddb525db6209",
+            "0f8eb46d-f075-49c9-95ac-c77c3fcc49f4",
+            "21a05288-2a71-4279-bde1-cab29570153c",
+            "65a8d3ab-0723-4723-a359-6f7fcdb27f81",
+            "2945faa1-a5ce-4b8d-8d60-02331d928faa",
+        ])
+
+        title = localizedStrings["dae2ddeb-c10d-4806-8fbd-155cdab62794"]
+
+        pickQuestionButton.setTitle(localizedStrings["4ad531d7-0d94-469a-a41b-3dbb83d58089"], for: .normal)
+
+        questionTextLabel.text = localizedStrings["fb07ce03-17ae-4ba7-8981-c03f3f16842b"]
+
+        repickQuestionButton.setTitle(localizedStrings["ef50397d-c364-4089-a7f1-ddb525db6209"], for: .normal)
 
         questionPickAnimationView = QuestionPickAnimationView(frame: .zero)
 
@@ -22,7 +42,7 @@ class PlayersChooseDealerController: UIViewController {
         view.addSubview(questionPickAnimationView)
 
         instructionView.setInstructions([
-            InstructionView.Instruction(image: UIImage(named: "Steward"), message: NSLocalizedString("Next, We choose a dealer. Please tap `Pick Question!` button.", comment: "[PlayersChooseDealerController::viewDidLoad] instruction")),
+            InstructionView.Instruction(image: UIImage(named: "Steward"), message: localizedStrings["0f8eb46d-f075-49c9-95ac-c77c3fcc49f4"] ?? "..."),
         ])
     }
 
@@ -67,9 +87,9 @@ extension PlayersChooseDealerController: QuestionPickAnimationViewDelegate {
             questionPickAnimationView.isHidden = true
 
             instructionView.setInstructions([
-                InstructionView.Instruction(image: UIImage(named: "Steward"), message: NSLocalizedString("Please answer the question shown in turn orally.", comment: "[PlayersChooseDealerController::viewDidLoad] instruction")),
-                InstructionView.Instruction(image: UIImage(named: "King"), message: NSLocalizedString("The person, who is closest to the condition in the question, is to be the first dealer.", comment: "[PlayersChooseDealerController::viewDidLoad] instruction")),
-                InstructionView.Instruction(image: UIImage(named: "King"), message: NSLocalizedString("OK, Now, you, holding this device and staring at me, answer first!", comment: "[PlayersChooseDealerController::viewDidLoad] instruction")),
+                InstructionView.Instruction(image: UIImage(named: "Steward"), message: localizedStrings["21a05288-2a71-4279-bde1-cab29570153c"] ?? "..."),
+                InstructionView.Instruction(image: UIImage(named: "King"), message: localizedStrings["65a8d3ab-0723-4723-a359-6f7fcdb27f81"] ?? "..."),
+                InstructionView.Instruction(image: UIImage(named: "King"), message: localizedStrings["2945faa1-a5ce-4b8d-8d60-02331d928faa"] ?? "..."),
             ])
         }
     }
