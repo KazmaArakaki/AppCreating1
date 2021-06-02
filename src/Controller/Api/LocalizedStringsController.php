@@ -40,7 +40,7 @@ class LocalizedStringsController extends ApiController {
           ->map(function ($localizedString) {
             return [
               'uuid' => $localizedString['string_uuid']['uuid'],
-              'value' => h($localizedString['value']),
+              'value' => $localizedString['value'],
             ];
           })
           ->toList();

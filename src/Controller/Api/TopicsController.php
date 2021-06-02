@@ -16,7 +16,7 @@ class TopicsController extends ApiController {
         ->map(function ($topic) {
           return [
             'uuid' => $topic['uuid'],
-            'title' => h($topic['title']),
+            'title' => $topic['title'],
           ];
         })
         ->toList();

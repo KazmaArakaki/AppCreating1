@@ -19,7 +19,7 @@ class LanguagesController extends ApiController {
         ->map(function ($language) {
           return [
             'short_key' => $language['short_key'],
-            'name' => h($language['name']),
+            'name' => $language['name'],
           ];
         })
         ->toList();

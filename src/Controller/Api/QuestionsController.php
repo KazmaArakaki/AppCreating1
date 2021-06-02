@@ -16,7 +16,7 @@ class QuestionsController extends ApiController {
         ->map(function ($question) {
           return [
             'uuid' => $question['uuid'],
-            'title' => h($question['title']),
+            'title' => $question['title'],
           ];
         })
         ->toList();
