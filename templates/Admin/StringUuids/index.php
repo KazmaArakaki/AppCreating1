@@ -8,6 +8,39 @@
   </div>
 </div>
 
+<div class="card mb-4">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a href="#" class="nav-link active">
+          <?= __('検索') ?>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card-body">
+    <?= $this->Form->create(null, [
+      'novalidate' => true,
+      'class' => 'row g-1',
+    ]) ?>
+      <div class="col">
+        <?= $this->Form->text('search_query', [
+          'value' => $searchQuery,
+          'class' => 'form-control form-control-sm',
+        ]) ?>
+      </div>
+
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary btn-sm">
+          <?= __('検索') ?>
+        </button>
+      </div>
+    <?= $this->Form->end() ?>
+  </div>
+</div>
+
+
 <table class="table table-bordered table-striped table-hover table-sm">
   <tbody>
     <?php foreach ($stringUuids as $stringUuid): ?>

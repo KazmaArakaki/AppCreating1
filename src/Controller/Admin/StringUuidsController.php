@@ -9,6 +9,8 @@ use Cake\Log\Log;
 class StringUuidsController extends AdminController {
   public function initialize(): void {
     parent::initialize();
+
+    $this->loadModel('LocalizedStrings');
   }
 
   public function create() {
@@ -48,14 +50,62 @@ class StringUuidsController extends AdminController {
   }
 
   public function index() {
-    $stringUuids = $this->StringUuids->find()
-        ->order([
-          'StringUuids.id' => 'desc',
-        ])
-        ->toList();
+    $session = $this->request->getSession();
+
+    $searchQuery = $session->read('Admin.StringUuids.searchQuery');
+
+    if ($this->request->is(['post'])) {
+      if (!empty($this->request->getData('search_query'))) {
+        $searchQuery = $this->request->getData('search_query');
+
+        $session->write('Admin.StringUuids.searchQuery', $searchQuery);
+      } else {
+        $searchQuery = null;
+
+        $session->delete('Admin.StringUuids.searchQuery');
+      }
+    }
+
+    $stringUuids = [];
+
+    if (!empty($searchQuery)) {
+      $stringUuidIds = $this->LocalizedStrings->find()
+          ->where([
+            ['LocalizedStrings.value LIKE' => sprintf('%%%s%%', $searchQuery)],
+          ])
+          ->extract('string_uuid_id')
+          ->toList();
+
+      $stringUuidIds = array_unique($stringUuidIds);
+
+      if (empty($stringUuidIds)) {
+        $stringUuidIds = [0];
+      }
+
+      $stringUuids = $this->StringUuids->find()
+          ->where([
+            [
+              'OR' => [
+                ['StringUuids.id IN' => $stringUuidIds],
+                ['StringUuids.description LIKE' => sprintf('%%%s%%', $searchQuery)],
+              ],
+            ],
+          ])
+          ->order([
+            'StringUuids.id' => 'desc',
+          ])
+          ->toList();
+    } else {
+      $stringUuids = $this->StringUuids->find()
+          ->order([
+            'StringUuids.id' => 'desc',
+          ])
+          ->toList();
+    }
 
     $this->set(compact([
       'stringUuids',
+      'searchQuery',
     ]));
   }
 
