@@ -15,6 +15,7 @@ class PlayersEditNameViewController: UIViewController {
             "207a5170-11e3-4828-bb15-b06807bfbd47",
             "6237b5fa-5c25-452e-b795-e77ff9a448ed",
             "3cae4b29-756b-482b-be07-936e62220d1e",
+            "d43a95d7-e247-47b2-9437-3ff73125c180",
         ])
 
         navigationItem.backBarButtonItem = UIBarButtonItem()
@@ -46,6 +47,16 @@ class PlayersEditNameViewController: UIViewController {
     }
 
     @IBAction func submitButtonTouchUpInside(_ sender: UIButton) {
+        for player in GameSession.current.players {
+            if player.name.isEmpty {
+                instructionView.setWarnings([
+                    InstructionView.Instruction(image: UIImage(named: "King"), message: localizedStrings["d43a95d7-e247-47b2-9437-3ff73125c180"] ?? "...")
+                ])
+
+                return
+            }
+        }
+
         performSegue(withIdentifier: "PlayersChooseDealer", sender: nil)
     }
 

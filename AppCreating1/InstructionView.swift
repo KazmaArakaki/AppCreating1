@@ -14,6 +14,8 @@ class InstructionView: UIView {
     private var instructions: [Instruction] = []
     private var instructionIndex = 0
 
+    private var warnings: [Instruction] = []
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
@@ -35,9 +37,27 @@ class InstructionView: UIView {
     func setInstructions(_ instructions: [Instruction]) {
         self.instructions = instructions
 
+        self.warnings = []
+
         charactorPreview.image = instructions.first?.image
 
         instructionText.text = instructions.first?.message
+    }
+
+    func setWarnings(_ warnings: [Instruction]) {
+        self.warnings = warnings
+
+        switchInstruction(index: 0)
+
+        UINotificationFeedbackGenerator().notificationOccurred(.error)
+
+        UIView.animate(withDuration: 0.05, delay: 0, options: .autoreverse, animations: {
+            self.transform = CGAffineTransform(translationX: 8, y: 2)
+        }, completion: { (complete) in
+            UIView.animate(withDuration: 0.05, delay: 0, options: .autoreverse, animations: {
+                self.transform = CGAffineTransform(translationX: -2, y: -8)
+            })
+        })
     }
 
     private func initialize() {
@@ -56,13 +76,21 @@ class InstructionView: UIView {
         })
     }
 
-    @objc private func tap(_ sender: UITapGestureRecognizer) {
-        instructionIndex = (instructionIndex + 1) % instructions.count
+    private func switchInstruction(index: Int) {
+        let instructions = warnings + self.instructions
 
-        if instructions.indices.contains(instructionIndex) {
+        if instructions.indices.contains(index) {
             charactorPreview.image = instructions[instructionIndex].image
 
             instructionText.text = instructions[instructionIndex].message
         }
+    }
+
+    @objc private func tap(_ sender: UITapGestureRecognizer) {
+        let instructions = warnings + self.instructions
+
+        instructionIndex = (instructionIndex + 1) % instructions.count
+
+        switchInstruction(index: instructionIndex)
     }
 }
