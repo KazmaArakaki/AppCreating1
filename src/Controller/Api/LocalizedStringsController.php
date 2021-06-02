@@ -37,7 +37,13 @@ class LocalizedStringsController extends ApiController {
           ->where([
             ['LocalizedStrings.language_id' => $language['id']],
           ])
-          ->combine('string_uuid.uuid', 'value');
+          ->map(function ($localizedString) {
+            return [
+              'uuid' => $localizedString['string_uuid']['uuid'],
+              'value' => h($localizedString['value']),
+            ];
+          })
+          ->toList();
 
       $this->responseData['data'] = [
         'localized_strings' => $localizedStringsData,

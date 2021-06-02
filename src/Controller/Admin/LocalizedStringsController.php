@@ -195,6 +195,7 @@ class LocalizedStringsController extends AdminController {
     }
 
     $this->set(compact([
+      'stringUuid',
       'localizedString',
     ]));
   }

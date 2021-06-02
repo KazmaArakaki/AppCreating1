@@ -1,3 +1,15 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title">
+      <?= h($stringUuid['uuid']) ?>
+    </h5>
+
+    <p class="card-text">
+      <?= nl2br(h($stringUuid['description'])) ?>
+    </p>
+  </div>
+</div>
+
 <?= $this->Form->create($localizedString, ['novalidate' => true]) ?>
   <div class="mb-3">
     <label class="form-label">

@@ -31,7 +31,9 @@ class StringUuidsController extends AdminController {
         $this->Flash->success(__('テキストを保存しました。'));
 
         return $this->redirect([
+          'controller' => 'LocalizedStrings',
           'action' => 'index',
+          'stringUuidId' => $stringUuid['id'],
         ]);
       } catch (AppException $exception) {
         $this->Flash->error(__('テキストを保存できませんでした。'));
