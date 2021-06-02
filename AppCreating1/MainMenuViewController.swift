@@ -30,8 +30,13 @@ class MainMenuViewController: UIViewController {
     }
 
     @IBAction func startGameButtonTouchUpInside(_ sender: UIButton) {
-        if let playersNavigationViewController = storyboard?.instantiateViewController(withIdentifier: "PlayersNavigation") {
-            UIApplication.shared.windows.first?.rootViewController = playersNavigationViewController
+        if
+            let window = UIApplication.shared.windows.first,
+            let playersNavigationViewController = storyboard?.instantiateViewController(withIdentifier: "PlayersNavigation")
+        {
+            window.rootViewController = playersNavigationViewController
+
+            UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
         }
     }
 

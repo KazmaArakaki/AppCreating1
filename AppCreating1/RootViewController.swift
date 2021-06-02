@@ -158,8 +158,17 @@ class RootViewController: UIViewController {
             }
         }
 
-        if let mainNavigationViewController = storyboard?.instantiateViewController(withIdentifier: "MainNavigation") {
-            UIApplication.shared.windows.first?.rootViewController = mainNavigationViewController
+        DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                if
+                    let window = UIApplication.shared.windows.first,
+                    let mainNavigationViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainNavigation")
+                {
+                    window.rootViewController = mainNavigationViewController
+
+                    UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                }
+            })
         }
     }
 
