@@ -1,6 +1,7 @@
 import UIKit
 
 class MainMenuViewController: UIViewController {
+    @IBOutlet weak var logoPreview: UIImageView!
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var readInstructionsButton: UIButton!
     @IBOutlet weak var watchTutorialButton: UIButton!

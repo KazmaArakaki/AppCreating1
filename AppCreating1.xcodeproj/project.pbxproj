@@ -61,6 +61,9 @@
 		31E47E92264FD5910028B545 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E47E91264FD5910028B545 /* SecondaryButton.swift */; };
 		31F046A5265DDD50001FB7A9 /* AbstractApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F046A4265DDD50001FB7A9 /* AbstractApiClient.swift */; };
 		31F046A9265DDE00001FB7A9 /* TopicsIndexApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F046A8265DDE00001FB7A9 /* TopicsIndexApiClient.swift */; };
+		31F3B4D92668F91E00050549 /* TopicsChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F3B4D82668F91E00050549 /* TopicsChooseViewController.swift */; };
+		31F3B4DD266909E900050549 /* TopicsPickAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F3B4DC266909E900050549 /* TopicsPickAnimationView.swift */; };
+		31F3B4E1266909FE00050549 /* TopicsPickAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F3B4E0266909FE00050549 /* TopicsPickAnimationView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +122,9 @@
 		31E47E91264FD5910028B545 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		31F046A4265DDD50001FB7A9 /* AbstractApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractApiClient.swift; sourceTree = "<group>"; };
 		31F046A8265DDE00001FB7A9 /* TopicsIndexApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsIndexApiClient.swift; sourceTree = "<group>"; };
+		31F3B4D82668F91E00050549 /* TopicsChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsChooseViewController.swift; sourceTree = "<group>"; };
+		31F3B4DC266909E900050549 /* TopicsPickAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsPickAnimationView.swift; sourceTree = "<group>"; };
+		31F3B4E0266909FE00050549 /* TopicsPickAnimationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicsPickAnimationView.xib; sourceTree = "<group>"; };
 		6848F1A5F650A59D1FAF9ECB /* Pods_AppCreating1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppCreating1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A026AE652640FD13669B2A6D /* Pods-AppCreating1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCreating1.debug.xcconfig"; path = "Target Support Files/Pods-AppCreating1/Pods-AppCreating1.debug.xcconfig"; sourceTree = "<group>"; };
 		A16AA608926168AE6658AEAD /* Pods-AppCreating1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCreating1.release.xcconfig"; path = "Target Support Files/Pods-AppCreating1/Pods-AppCreating1.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 				319B4278265E6FF100F39191 /* PlayersEditNameViewController.swift */,
 				31C5C8B72664E3FA000A1EF2 /* PlayersChooseQuestionViewController.swift */,
 				319399B92667A8D30088F9DB /* PlayersChooseDealerViewController.swift */,
+				31F3B4D82668F91E00050549 /* TopicsChooseViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +333,7 @@
 				31A80CA3265E3F350018BBD4 /* ActivityIndicatorView */,
 				317F01762665D5E700149380 /* FetchAssetsView */,
 				31C5C8BA2664E868000A1EF2 /* QuestionPickAnimationView */,
+				31F3B4DB266909BB00050549 /* TopicsPickAnimationView */,
 				31322B0526512820008D58C1 /* AssetImageView */,
 				3180C4B3265A615B002ED550 /* InstructionView */,
 				31322B0026511CAD008D58C1 /* BaseButton */,
@@ -365,6 +373,15 @@
 				317F0189266659B100149380 /* LocalizedStringsIndexApiClient.swift */,
 			);
 			name = ApiClients;
+			sourceTree = "<group>";
+		};
+		31F3B4DB266909BB00050549 /* TopicsPickAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				31F3B4DC266909E900050549 /* TopicsPickAnimationView.swift */,
+				31F3B4E0266909FE00050549 /* TopicsPickAnimationView.xib */,
+			);
+			name = TopicsPickAnimationView;
 			sourceTree = "<group>";
 		};
 		9E3C0C8F630A9BFD0C505C1A /* Pods */ = {
@@ -451,6 +468,7 @@
 				319B427F265E715D00F39191 /* PlayerEditNameTableViewCell.xib in Resources */,
 				312A96202646A604008C2278 /* Assets.xcassets in Resources */,
 				312A961E2646A603008C2278 /* Main.storyboard in Resources */,
+				31F3B4E1266909FE00050549 /* TopicsPickAnimationView.xib in Resources */,
 				3180C4C1265A63B1002ED550 /* InstructionView.xib in Resources */,
 				317F01AB26673A3C00149380 /* LanguageTableViewCell.xib in Resources */,
 				31C5C8BF2664E8C8000A1EF2 /* QuestionPickAnimationView.xib in Resources */,
@@ -508,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F3B4D92668F91E00050549 /* TopicsChooseViewController.swift in Sources */,
 				31F046A5265DDD50001FB7A9 /* AbstractApiClient.swift in Sources */,
 				319B426D265E4BC500F39191 /* Topic.swift in Sources */,
 				317F019726672BCE00149380 /* SettingsViewController.swift in Sources */,
@@ -548,6 +567,7 @@
 				317F019F2667373300149380 /* Language.swift in Sources */,
 				317F019B2667354900149380 /* SettingsLanguageViewController.swift in Sources */,
 				319B4276265E59DD00F39191 /* QuestionRegistry.swift in Sources */,
+				31F3B4DD266909E900050549 /* TopicsPickAnimationView.swift in Sources */,
 				312E8FF82659281F00EE0E2D /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

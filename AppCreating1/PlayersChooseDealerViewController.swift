@@ -50,11 +50,14 @@ class PlayersChooseDealerViewController: UIViewController {
     }
 
     @IBAction func submitButtonTouchUpInside(_ sender: UIButton) {
-        let alertController = UIAlertController(title: nil, message: "Under Development", preferredStyle: .alert)
+        if
+            let window = UIApplication.shared.windows.first,
+            let topicsNavigationViewController = storyboard?.instantiateViewController(withIdentifier: "TopicsNavigation")
+        {
+            window.rootViewController = topicsNavigationViewController
 
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-
-        present(alertController, animated: true, completion: nil)
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
     }
 }
 

@@ -1,5 +1,13 @@
 import UIKit
 
+protocol InstructionViewDelegate {
+    func instructionView(instructionIndex: Int)
+}
+
+extension InstructionViewDelegate {
+    func instructionView(instructionIndex: Int) {}
+}
+
 @IBDesignable
 class InstructionView: UIView {
     struct Instruction {
@@ -7,12 +15,15 @@ class InstructionView: UIView {
         let message: String
     }
 
+    var delegate: InstructionViewDelegate?
+
+    var instructionIndex = 0
+
     @IBOutlet weak var charactorPreview: UIImageView!
     @IBOutlet weak var instructionText: UILabel!
     @IBOutlet weak var indicator: UIImageView!
 
     private var instructions: [Instruction] = []
-    private var instructionIndex = 0
 
     private var warnings: [Instruction] = []
 
@@ -42,12 +53,30 @@ class InstructionView: UIView {
         charactorPreview.image = instructions.first?.image
 
         instructionText.text = instructions.first?.message
+
+        delegate?.instructionView(instructionIndex: instructionIndex)
+
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.1, delay: 0, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
+                self.transform = CGAffineTransform(translationX: 0, y: -24)
+            })
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                self.layer.removeAllAnimations()
+
+                UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseOut], animations: {
+                    self.transform = CGAffineTransform.identity
+                })
+            })
+        }
     }
 
     func setWarnings(_ warnings: [Instruction]) {
         self.warnings = warnings
 
         switchInstruction(index: 0)
+
+        delegate?.instructionView(instructionIndex: instructionIndex)
 
         UINotificationFeedbackGenerator().notificationOccurred(.error)
 
@@ -92,5 +121,7 @@ class InstructionView: UIView {
         instructionIndex = (instructionIndex + 1) % instructions.count
 
         switchInstruction(index: instructionIndex)
+
+        delegate?.instructionView(instructionIndex: instructionIndex)
     }
 }

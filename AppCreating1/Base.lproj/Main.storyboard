@@ -75,7 +75,7 @@
                                     <constraint firstItem="jVn-Ry-ODP" firstAttribute="top" secondItem="iAq-tJ-NYJ" secondAttribute="top" id="spb-vC-dHL"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DkV-FP-Raj" userLabel="Logo Preview" customClass="AssetImageView" customModule="AppCreating1" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DkV-FP-Raj" userLabel="Logo Preview" customClass="AssetImageView" customModule="AppCreating1" customModuleProvider="target">
                                 <rect key="frame" x="48" y="164" width="279" height="122"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="assetName" value="AppIcon"/>
@@ -97,6 +97,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="1ed-oI-fNJ"/>
                     <connections>
+                        <outlet property="logoPreview" destination="DkV-FP-Raj" id="Jjj-zW-oHU"/>
                         <outlet property="readInstructionsButton" destination="4Pf-wM-5rL" id="Nds-zj-Ixj"/>
                         <outlet property="showSettingsButton" destination="Ys2-CP-krr" id="Yo4-vo-bTe"/>
                         <outlet property="startGameButton" destination="jVn-Ry-ODP" id="pbG-mO-Gch"/>
@@ -318,6 +319,46 @@
             </objects>
             <point key="canvasLocation" x="2906" y="867"/>
         </scene>
+        <!--Topics Choose-->
+        <scene sceneID="vee-DH-yKz">
+            <objects>
+                <viewController id="J17-cB-pHt" userLabel="Topics Choose" customClass="TopicsChooseViewController" customModule="AppCreating1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CTe-on-dQg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_0" translatesAutoresizingMaskIntoConstraints="NO" id="J71-V0-ivH" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rr3-am-KDd" customClass="InstructionView" customModule="AppCreating1" customModuleProvider="target">
+                                <rect key="frame" x="16" y="642" width="343" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="8CG-Do-hls"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tTD-l2-GeU"/>
+                        <color key="backgroundColor" name="PaleBlue"/>
+                        <constraints>
+                            <constraint firstItem="J71-V0-ivH" firstAttribute="top" secondItem="CTe-on-dQg" secondAttribute="top" id="E2L-2u-RjN"/>
+                            <constraint firstItem="J71-V0-ivH" firstAttribute="bottom" secondItem="CTe-on-dQg" secondAttribute="bottom" id="GiU-wW-G4G"/>
+                            <constraint firstItem="rr3-am-KDd" firstAttribute="trailing" secondItem="tTD-l2-GeU" secondAttribute="trailing" constant="-16" id="Mqn-if-LJa"/>
+                            <constraint firstItem="J71-V0-ivH" firstAttribute="leading" secondItem="CTe-on-dQg" secondAttribute="leading" id="c5y-xi-CWN"/>
+                            <constraint firstItem="J71-V0-ivH" firstAttribute="trailing" secondItem="CTe-on-dQg" secondAttribute="trailing" id="eNj-pK-aQT"/>
+                            <constraint firstItem="rr3-am-KDd" firstAttribute="leading" secondItem="tTD-l2-GeU" secondAttribute="leading" constant="16" id="gzK-9c-HZl"/>
+                            <constraint firstItem="rr3-am-KDd" firstAttribute="bottom" secondItem="tTD-l2-GeU" secondAttribute="bottom" constant="-16" id="sgy-9E-0cZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oQZ-pC-0Uw"/>
+                    <connections>
+                        <outlet property="instructionView" destination="rr3-am-KDd" id="Vk2-bV-0Pm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qo7-M4-HQ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2906.4000000000001" y="1636.6995073891626"/>
+        </scene>
         <!--Players Edit Name-->
         <scene sceneID="9yB-st-PZx">
             <objects>
@@ -532,8 +573,8 @@
                                     <rect key="frame" x="0.0" y="100" width="375" height="108"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUD-Bq-5br" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
-                                            <rect key="frame" x="164" y="6" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUD-Bq-5br" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
+                                            <rect key="frame" x="24" y="24" width="327" height="53"/>
                                             <state key="normal" title="Next"/>
                                             <connections>
                                                 <action selector="submitButtonTouchUpInside:" destination="ut2-cj-ggH" eventType="touchUpInside" id="0Q1-ml-bkU"/>
@@ -695,6 +736,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAv-Jw-8j2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1964" y="-691.62561576354688"/>
+        </scene>
+        <!--Topics Navigation-->
+        <scene sceneID="1OV-SN-3vo">
+            <objects>
+                <navigationController storyboardIdentifier="TopicsNavigation" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vaG-8K-FRf" userLabel="Topics Navigation" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gj2-hK-cmy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J17-cB-pHt" kind="relationship" relationship="rootViewController" id="WwJ-Li-NDx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vqp-e1-Z7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="1636.6995073891626"/>
         </scene>
     </scenes>
     <designables>
