@@ -30,6 +30,12 @@ class MainMenuViewController: UIViewController {
         showSettingsButton.setTitle(localizedStrings["67c94249-d182-4b83-bf57-bff7b7f5e1eb"], for: .normal)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        AudioPlayer.shared.stopBGM()
+    }
+
     @IBAction func startGameButtonTouchUpInside(_ sender: UIButton) {
         if
             let window = UIApplication.shared.windows.first,

@@ -23,6 +23,10 @@ class AudioPlayer {
         self.bgmAudioPlayer = audioPlayer
     }
 
+    func stopBGM() {
+        self.bgmAudioPlayer?.stop()
+    }
+
     func playButtonEffect() {
         guard
             let buttonEffectAudioData = AssetRegistry.shared.buttonEffectAudioData,

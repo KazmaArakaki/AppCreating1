@@ -90,11 +90,11 @@ class PlayersChooseQuestionViewController: UIViewController {
     @IBAction func submitButtonTouchUpInside(_ sender: UIButton) {
         let alertController = UIAlertController(title: nil, message: localizedStrings["f8b6d590-6261-43d3-82bd-57c652afcdff"], preferredStyle: .actionSheet)
 
-        alertController.addAction(UIAlertAction(title: localizedStrings["d9a8c813-7559-4090-8fcb-2b2fd0ba0f39"], style: .default, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: localizedStrings["d9a8c813-7559-4090-8fcb-2b2fd0ba0f39"] ?? "", style: .default, handler: { (action) in
             self.performSegue(withIdentifier: "PlayersChooseDealer", sender: nil)
         }))
 
-        alertController.addAction(UIAlertAction(title: localizedStrings["ae6767a2-ddc8-476e-8ac7-69000ab70896"], style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: localizedStrings["ae6767a2-ddc8-476e-8ac7-69000ab70896"] ?? "", style: .cancel, handler: nil))
 
         present(alertController, animated: true, completion: nil)
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f4Q-S1-jZd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f4Q-S1-jZd">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -121,14 +121,14 @@
                             <tableViewSection headerTitle="Settings" id="PQl-q6-AeA">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="kQ9-n7-Wys" style="IBUITableViewCellStyleDefault" id="Kyl-Ye-Cm7">
-                                        <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="49" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kyl-Ye-Cm7" id="d13-O1-r17">
-                                            <rect key="frame" x="0.0" y="0.0" width="347.66666666666669" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kQ9-n7-Wys">
-                                                    <rect key="frame" x="16" y="0.0" width="323.66666666666669" height="43.666667938232422"/>
+                                                    <rect key="frame" x="16" y="0.0" width="325.33333333333331" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="16"/>
                                                     <nil key="textColor"/>
@@ -145,7 +145,7 @@
                             <tableViewSection headerTitle="App Informations" id="EA2-HD-xBj">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="aHt-tF-hOI" detailTextLabel="eFh-mK-wHH" style="IBUITableViewCellStyleValue1" id="gs4-a7-Lj1">
-                                        <rect key="frame" x="0.0" y="155" width="375" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="142.33333396911621" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gs4-a7-Lj1" id="ppJ-6D-nHu">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
@@ -305,9 +305,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Players Settings" id="dev-c3-Khm">
                         <barButtonItem key="backBarButtonItem" title="Back" id="kBV-nA-oAK"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Uak-in-G4L">
+                            <connections>
+                                <action selector="navigationBackButtonAction:" destination="jgL-8X-d2R" id="m89-H6-8MC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="instructionView" destination="xxP-gh-zrF" id="3L5-df-wXy"/>
+                        <outlet property="navigationBackButton" destination="Uak-in-G4L" id="lTK-M1-oU1"/>
                         <outlet property="playerCountFieldLabel1" destination="xXx-yO-ouu" id="WaQ-VA-MVL"/>
                         <outlet property="playerCountFieldLabel2" destination="2aI-gk-91B" id="1tt-MC-A46"/>
                         <outlet property="playerCountPicker" destination="dwf-AU-Kzm" id="dM7-m6-L3i"/>
@@ -375,7 +381,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="HQW-hu-PH5" userLabel="Player Edit Name Table Footer">
-                                    <rect key="frame" x="0.0" y="99.666667938232422" width="375" height="108"/>
+                                    <rect key="frame" x="0.0" y="92.333336223255515" width="375" height="108"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRy-WT-LGS" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
@@ -395,7 +401,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7h9-9d-95z">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7h9-9d-95z" id="XVQ-hd-dVA">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
@@ -570,7 +576,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="ImL-ru-BwU" userLabel="Choose Dealer Table Footer">
-                                    <rect key="frame" x="0.0" y="100" width="375" height="108"/>
+                                    <rect key="frame" x="0.0" y="92.666668285023093" width="375" height="108"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUD-Bq-5br" userLabel="Submit Button" customClass="PrimaryButton" customModule="AppCreating1" customModuleProvider="target">
@@ -590,7 +596,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="grk-5z-DGy">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="grk-5z-DGy" id="cOU-eW-pgn">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -723,7 +729,7 @@
         <!--Root Navigation-->
         <scene sceneID="wmq-MD-TPf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="f4Q-S1-jZd" userLabel="Root Navigation" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigation" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="f4Q-S1-jZd" userLabel="Root Navigation" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n30-WO-M6x">
                         <autoresizingMask key="autoresizingMask"/>

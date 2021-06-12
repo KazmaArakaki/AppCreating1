@@ -61,11 +61,18 @@ extension SettingsLanguageViewController: LanguageTableViewCellDelegate {
     func languageTableViewCell(tapped cell: LanguageTableViewCell, language: Language) {
         let alertController = UIAlertController(title: localizedStrings["1c623835-5c93-44fe-a8be-674019ba6491"], message: localizedStrings["fc22faaa-2d8d-4c12-8d37-d6b1c239e39e"], preferredStyle: .actionSheet)
 
-        alertController.addAction(UIAlertAction(title: localizedStrings["ae9102dc-3760-4208-a4a3-4d1a5cbd3b5b"], style: .default, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: localizedStrings["ae9102dc-3760-4208-a4a3-4d1a5cbd3b5b"] ?? "", style: .default, handler: { (action) in
             UserSession.current.setLanguageShortKey(language.shortKey)
+
+            if
+                let window = UIApplication.shared.windows.first,
+                let rootNavigationViewController = self.storyboard?.instantiateViewController(withIdentifier: "RootNavigation")
+            {
+                window.rootViewController = rootNavigationViewController
+            }
         }))
 
-        alertController.addAction(UIAlertAction(title: localizedStrings["922759ac-2d3e-4088-b0ed-a64684e292d4"], style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: localizedStrings["922759ac-2d3e-4088-b0ed-a64684e292d4"] ?? "", style: .cancel, handler: nil))
 
         present(alertController, animated: true, completion: nil)
     }

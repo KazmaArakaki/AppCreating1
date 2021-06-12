@@ -6,6 +6,7 @@ class PlayersAddViewController: UIViewController {
     @IBOutlet weak var playerCountFieldLabel2: UILabel!
     @IBOutlet weak var submitButton: PrimaryButton!
     @IBOutlet weak var instructionView: InstructionView!
+    @IBOutlet weak var navigationBackButton: UIBarButtonItem!
 
     private var localizedStrings: [String: String]!
     private var playerCountPickerOptions = [Int](2...100)
@@ -14,6 +15,7 @@ class PlayersAddViewController: UIViewController {
         super.viewDidLoad()
 
         localizedStrings = LocalizedStringRegistry.shared.read(uuids: [
+            "1322d520-12cd-46c2-932c-458a2e3037c0",
             "46d1df16-64ba-491e-9d53-7ee06778285c",
             "54e41629-ec57-4a50-9ef7-5c61dac0f8aa",
             "31b1e428-468a-49f3-9ea4-d1552caa38aa",
@@ -23,6 +25,8 @@ class PlayersAddViewController: UIViewController {
         ])
 
         navigationItem.backBarButtonItem = UIBarButtonItem()
+
+        navigationBackButton.title = localizedStrings["1322d520-12cd-46c2-932c-458a2e3037c0"]
 
         title = localizedStrings["46d1df16-64ba-491e-9d53-7ee06778285c"]
 
@@ -61,6 +65,17 @@ class PlayersAddViewController: UIViewController {
                     GameSession.current.popPlayer()
                 }
             }
+        }
+    }
+
+    @IBAction func navigationBackButtonAction(_ sender: UIBarButtonItem) {
+        if
+            let window = UIApplication.shared.windows.first,
+            let mainNavigationViewController = storyboard?.instantiateViewController(withIdentifier: "MainNavigation")
+        {
+            window.rootViewController = mainNavigationViewController
+
+            UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
         }
     }
 
