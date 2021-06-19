@@ -17,13 +17,22 @@ $languageNameMapById = $languageCollection->combine('id', 'name')->toArray();
 
   <?php foreach ($localizedStringCountMapByLanguageId as $languageId => $localizedStringCount): ?>
   <div class="col-auto">
-    <span class="btn <?= $localizedStringCount['count'] < $stringUuidCount ? 'btn-outline-danger' : 'btn-outline-secondary' ?>">
-      <?= h($languageNameMapById[$languageId]) ?>
-
-      <span class="badge <?= $localizedStringCount['count'] < $stringUuidCount ? 'bg-danger' : 'bg-secondary' ?>">
-        <?= h($localizedStringCount['count']) ?>
-      </span>
-    </span>
+    <?= $this->Form->postLink(vsprintf('%s <span class="badge %s">%d</span>', [
+      h($languageNameMapById[$languageId]),
+      $localizedStringCount['count'] < $stringUuidCount ? 'bg-danger' : 'bg-secondary',
+      $localizedStringCount['count'],
+    ]), null, [
+      'block' => true,
+      'data' => [
+        'search_query' => $searchQuery,
+        'target_language_id' => $languageId,
+      ],
+      'escape' => false,
+      'class' => implode(' ', [
+        'btn',
+        $localizedStringCount['count'] < $stringUuidCount ? 'btn-outline-danger' : 'btn-outline-secondary',
+      ]),
+    ]) ?>
   </div>
   <?php endforeach; ?>
 </div>
