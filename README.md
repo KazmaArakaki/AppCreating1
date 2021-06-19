@@ -1,3 +1,3 @@
 - [wiki](https://github.com/KazmaArakaki/AppCreating1/wiki)
 - [Project: Development](https://github.com/KazmaArakaki/AppCreating1/projects/1)
-
+- [Issues (is:closed sort:updated-desc)](https://github.com/KazmaArakaki/AppCreating1/issues?q=is%3Aclosed+sort%3Aupdated-desc)
