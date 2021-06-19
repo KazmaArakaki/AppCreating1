@@ -11,6 +11,8 @@ class GameSession {
         }
     }
 
+    var topics: [Topic] = []
+
     func addPlayer() {
         let player = Player()
 

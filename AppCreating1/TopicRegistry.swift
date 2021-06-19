@@ -41,4 +41,27 @@ class TopicRegistry {
             callback?(true)
         })
     }
+
+    func getRandom(count: Int) -> [Topic]? {
+        guard
+            let jsonData = try? Data(contentsOf: TopicRegistry.dataFileUrl),
+            let topicsData = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [[String: Any?]]
+        else {
+            return nil
+        }
+
+        var topics: [Topic] = []
+
+        while (topics.count < count) {
+            if let topicData = topicsData.randomElement() {
+                let topic = Topic.fromArray(topicData)
+
+                if !topics.contains(where: { $0.uuid == topic.uuid }) {
+                    topics.append(topic)
+                }
+            }
+        }
+
+        return topics
+    }
 }

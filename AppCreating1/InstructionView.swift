@@ -109,6 +109,8 @@ class InstructionView: UIView {
         let instructions = warnings + self.instructions
 
         if instructions.indices.contains(index) {
+            instructionIndex = index
+
             charactorPreview.image = instructions[instructionIndex].image
 
             instructionText.text = instructions[instructionIndex].message
