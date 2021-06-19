@@ -16,6 +16,8 @@ class StringUuidsTable extends Table {
 
   public function initialize(array $config): void {
     parent::initialize($config);
+
+    $this->hasMany('LocalizedStrings');
   }
 
   public function afterMarshal(EventInterface $event, EntityInterface $entity, ArrayObject $data, ArrayObject $options) {

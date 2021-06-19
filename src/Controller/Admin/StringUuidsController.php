@@ -10,6 +10,7 @@ class StringUuidsController extends AdminController {
   public function initialize(): void {
     parent::initialize();
 
+    $this->loadModel('Languages');
     $this->loadModel('LocalizedStrings');
   }
 
@@ -54,6 +55,8 @@ class StringUuidsController extends AdminController {
 
     $searchQuery = $session->read('Admin.StringUuids.searchQuery');
 
+    $targetLanguageId = $session->read('Admin.StringUuids.targetLanguageId');
+
     if ($this->request->is(['post'])) {
       if (!empty($this->request->getData('search_query'))) {
         $searchQuery = $this->request->getData('search_query');
@@ -64,9 +67,21 @@ class StringUuidsController extends AdminController {
 
         $session->delete('Admin.StringUuids.searchQuery');
       }
+
+      if (!empty($this->request->getData('target_language_id'))) {
+        $targetLanguageId = $this->request->getData('target_language_id');
+
+        $session->write('Admin.StringUuids.targetLanguageId', $targetLanguageId);
+      } else {
+        $searchQuery = null;
+
+        $session->delete('Admin.StringUuids.targetLanguageId');
+      }
+
+      return $this->redirect([]);
     }
 
-    $stringUuids = [];
+    $stringUuidsQuery = $this->StringUuids->find();
 
     if (!empty($searchQuery)) {
       $stringUuidIds = $this->LocalizedStrings->find()
@@ -82,30 +97,71 @@ class StringUuidsController extends AdminController {
         $stringUuidIds = [0];
       }
 
-      $stringUuids = $this->StringUuids->find()
-          ->where([
-            [
-              'OR' => [
-                ['StringUuids.id IN' => $stringUuidIds],
-                ['StringUuids.description LIKE' => sprintf('%%%s%%', $searchQuery)],
-              ],
-            ],
-          ])
-          ->order([
-            'StringUuids.id' => 'desc',
-          ])
-          ->toList();
-    } else {
-      $stringUuids = $this->StringUuids->find()
-          ->order([
-            'StringUuids.id' => 'desc',
-          ])
-          ->toList();
+      $stringUuidsQuery->where([
+        [
+          'OR' => [
+            ['StringUuids.id IN' => $stringUuidIds],
+            ['StringUuids.description LIKE' => sprintf('%%%s%%', $searchQuery)],
+          ],
+        ],
+      ]);
     }
 
+    if (!empty($targetLanguageId)) {
+      $stringUuidIds = $this->LocalizedStrings->find()
+          ->where([
+            ['LocalizedStrings.language_id' => $targetLanguageId],
+          ])
+          ->extract('string_uuid_id')
+          ->toList();
+
+      $stringUuids = array_unique($stringUuidIds);
+
+      if (empty($stringUuidIds)) {
+        $stringUuidIds = [0];
+      }
+
+      $stringUuidsQuery->where([
+        ['StringUuids.id NOT IN' => $stringUuids],
+      ]);
+    }
+
+    $stringUuids = $stringUuidsQuery
+        ->contain([
+          'LocalizedStrings',
+        ])
+        ->order([
+          'StringUuids.id' => 'desc',
+        ])
+        ->toList();
+
+    $languageCollection = $this->Languages->find();
+
+    $stringUuidCount = $this->StringUuids->find()
+        ->count();
+
+    $localizedStringsQuery = $this->LocalizedStrings->find();
+
+    $localizedStringCountMapByLanguageId = $localizedStringsQuery
+        ->select([
+          'language_id',
+          'count' => $localizedStringsQuery->func()
+              ->count('id'),
+        ])
+        ->group([
+          'LocalizedStrings.language_id',
+        ])
+        ->enableHydration(false)
+        ->indexBy('language_id')
+        ->toArray();
+
     $this->set(compact([
-      'stringUuids',
+      'languageCollection',
+      'localizedStringCountMapByLanguageId',
       'searchQuery',
+      'stringUuidCount',
+      'stringUuids',
+      'targetLanguageId',
     ]));
   }
 

@@ -1,4 +1,34 @@
-<div class="row mb-4">
+<?php
+$languages = $languageCollection->toList();
+
+$languageNameMapById = $languageCollection->combine('id', 'name')->toArray();
+?>
+
+<div class="row my-4">
+  <div class="col-auto">
+    <span class="btn btn-outline-secondary">
+      <?= __('すべて') ?>
+
+      <span class="badge bg-secondary">
+        <?= h($stringUuidCount) ?>
+      </span>
+    </span>
+  </div>
+
+  <?php foreach ($localizedStringCountMapByLanguageId as $languageId => $localizedStringCount): ?>
+  <div class="col-auto">
+    <span class="btn <?= $localizedStringCount['count'] < $stringUuidCount ? 'btn-outline-danger' : 'btn-outline-secondary' ?>">
+      <?= h($languageNameMapById[$languageId]) ?>
+
+      <span class="badge <?= $localizedStringCount['count'] < $stringUuidCount ? 'bg-danger' : 'bg-secondary' ?>">
+        <?= h($localizedStringCount['count']) ?>
+      </span>
+    </span>
+  </div>
+  <?php endforeach; ?>
+</div>
+
+<div class="row my-4">
   <div class="col-auto">
     <a href="<?= $this->Url->build([
       'action' => 'create',
@@ -8,7 +38,7 @@
   </div>
 </div>
 
-<div class="card mb-4">
+<div class="card my-4">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
@@ -20,21 +50,36 @@
   </div>
 
   <div class="card-body">
-    <?= $this->Form->create(null, [
-      'novalidate' => true,
-      'class' => 'row g-1',
-    ]) ?>
-      <div class="col">
-        <?= $this->Form->text('search_query', [
-          'value' => $searchQuery,
-          'class' => 'form-control form-control-sm',
-        ]) ?>
+    <?= $this->Form->create(null, ['novalidate' => true]) ?>
+      <div class="row g-1">
+        <div class="col">
+          <?= $this->Form->text('search_query', [
+            'value' => $searchQuery,
+            'class' => 'form-control form-control-sm',
+          ]) ?>
+        </div>
+
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary btn-sm">
+            <?= __('検索') ?>
+          </button>
+        </div>
       </div>
 
-      <div class="col-auto">
-        <button type="submit" class="btn btn-primary btn-sm">
-          <?= __('検索') ?>
-        </button>
+      <div class="row g-1 mt-1">
+        <div class="col-auto">
+          <div class="input-group input-group-sm">
+            <span class="input-group-text">
+              <?= __('未ローカライズのみ') ?>
+            </span>
+
+            <?= $this->Form->select('target_language_id', $languageNameMapById, [
+              'empty' => true,
+              'value' => $targetLanguageId,
+              'class' => 'form-select',
+            ]) ?>
+          </div>
+        </div>
       </div>
     <?= $this->Form->end() ?>
   </div>
@@ -44,44 +89,10 @@
 <table class="table table-bordered table-striped table-hover table-sm">
   <tbody>
     <?php foreach ($stringUuids as $stringUuid): ?>
-    <tr>
-      <td>
-        <a href="<?= $this->Url->build([
-          'controller' => 'LocalizedStrings',
-          'action' => 'index',
-          'stringUuidId' => $stringUuid['id'],
-        ]) ?>" class="d-block">
-          <?= h($stringUuid['uuid']) ?>
-        </a>
-
-        <small class="d-block">
-          <?= h($stringUuid['description']) ?>
-        </small>
-      </td>
-
-      <td style="<?= $this->Html->style([
-        'width' => '120px',
-      ]) ?>">
-        <div class="d-grid gap-1">
-          <a href="<?= $this->Url->build([
-            'action' => 'update',
-            $stringUuid['id'],
-          ]) ?>" class="btn btn-warning btn-sm py-0">
-            <?= __('編集') ?>
-          </a>
-
-          <?= $this->Form->postLink(__('削除'), [
-            'action' => 'delete',
-            $stringUuid['id'],
-          ], [
-            'block' => true,
-            'method' => 'delete',
-            'confirm' => __('本当に削除しますか？'),
-            'class' => 'btn btn-danger btn-sm py-0',
-          ]) ?>
-        </div>
-      </td>
-    </tr>
+      <?= $this->element('Admin/StringUuids/index/string_uuid_table_item', [
+        'languages' => $languages,
+        'stringUuid' => $stringUuid,
+      ]) ?>
     <?php endforeach; ?>
   </tbody>
 </table>
